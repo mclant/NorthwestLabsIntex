@@ -8,22 +8,16 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
-    // Compound Table
-    [Table("Compounds")]
-    public class Compounds
+    public class SampleAppearances
     {
         [Key]                   // Primary Key
         [Required]
-        [DisplayName("LT Number")]
+        [DisplayName("Appearance ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int LTNumber { get; set; }
+        public int AppearanceID { get; set; }
 
         [Required]
-        [DisplayName("Compound Name")]
-        public String CompoundName { get; set; }
-
-        [Required]
-        [DisplayName("Maximum Dose")]
-        public float? MaximumDose { get; set; }
+        [DisplayName("Appearance Description")]
+        public String AppearanceDesc { get; set; }
     }
 }

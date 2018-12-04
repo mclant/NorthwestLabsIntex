@@ -153,6 +153,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Compounds.cs" />
+    <Compile Include="Models\SampleAppearances.cs" />
+    <Compile Include="Models\Samples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
