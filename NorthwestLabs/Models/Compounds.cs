@@ -12,18 +12,19 @@ namespace NorthwestLabs.Models
     [Table("Compounds")]
     public class Compounds
     {
-        [Key]                   // Primary Key
-        [Required]
-        [DisplayName("LT Number")]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("LT Number")]
+        [Required(ErrorMessage = "LT Number is required.")]
         public int LTNumber { get; set; }
 
-        [Required]
+        [StringLength(30, ErrorMessage ="Compound Name must not exceed 30 characters.")]
         [DisplayName("Compound Name")]
-        public String CompoundName { get; set; }
+        [Required(ErrorMessage = "Compound Name is required.")]
+        public string CompoundName { get; set; }
 
-        [Required]
         [DisplayName("Maximum Dose")]
+        [Required(ErrorMessage = "Maximum Dose is required.")]
         public float? MaximumDose { get; set; }
     }
 }

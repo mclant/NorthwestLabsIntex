@@ -10,14 +10,15 @@ namespace NorthwestLabs.Models
 {
     public class SampleAppearances
     {
-        [Key]                   // Primary Key
-        [Required]
-        [DisplayName("Appearance ID")]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("Appearance ID")]
+        [Required(ErrorMessage ="Appearance ID is required.")]
         public int AppearanceID { get; set; }
 
-        [Required]
+        [StringLength(30, ErrorMessage ="Appearance Description must not exceed 30 characters."]
         [DisplayName("Appearance Description")]
-        public String AppearanceDesc { get; set; }
+        [Required(ErrorMessage ="Appearance Description is required.")]
+        public string AppearanceDesc { get; set; }
     }
 }

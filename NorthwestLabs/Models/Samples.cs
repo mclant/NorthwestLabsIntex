@@ -12,35 +12,35 @@ namespace NorthwestLabs.Models
     [Table("Samples")]
     public class Samples
     {
-        [Key]                   // Primary Key
-        [Required(ErrorMessage = "The Compound Sequence Code is required")]
-        [DisplayName("Compound Sequence Code")]
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("Compound Sequence Code")]
+        [Required(ErrorMessage = "Compound Sequence Code is required")]
         public int CompoundSequenceCode { get; set; }
 
         // Link to the Compound Table
-        [Required(ErrorMessage = "The LT Number for the sample compound is required")]
         [DisplayName("LT Number")]
+        [Required(ErrorMessage = "LT Number is required")]
         public int LTNumber { get; set; }
-        public virtual Compounds compound { get; set; }
+        public virtual Compounds compounds { get; set; }
 
         [DisplayName("Date Arrived")]
-        public Nullable<DateTime> DateArrived { get; set; }
+        public DateTime? DateArrived { get; set; }
 
-        [StringLength(30, ErrorMessage = "Received By must be less than 30 characters in length")]
         [DisplayName("Received By")]
+        [StringLength(30, ErrorMessage = "Received By must not exceed 30 characters.")]
         public string ReceivedBy { get; set; }
 
         // Link to the SampleAppearances Table
         [DisplayName("Appearance ID")]
-        public Nullable<int> AppearanceID { get; set; }
-        public virtual SampleAppearances sampleAppearance { get; set; }
+        public int? AppearanceID { get; set; }
+        public virtual SampleAppearances sampleappearances { get; set; }
 
-        [Required(ErrorMessage = "The weight in milligrams is required")]
+        [Required(ErrorMessage = "Weight in milligrams is required")]
         [DisplayName("Weight (mg)")]
         public float Weight { get; set; }
 
         [DisplayName("Molecular Mass")]
-        public Nullable<float> MolecularMass { get; set; }
+        public float? MolecularMass { get; set; }
     }
 }
