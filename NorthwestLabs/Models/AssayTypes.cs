@@ -15,7 +15,6 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Assay Type ID")]
-        [Required(ErrorMessage = "Assay Type ID is required.")]
         public int AssayTypeID { get; set; }
         // Link back to AssayInstances Table
         public virtual AssayInstances assayinstances { get; set; }
