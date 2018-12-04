@@ -16,9 +16,13 @@ namespace NorthwestLabs.Models
         [DisplayName("Order ID")]
         public int OrderID { get; set; }
 
+        public virtual OrderDetails orderdetails { get; set; }
+
         [Required(ErrorMessage = "You must enter your Customer ID")]
         [DisplayName("Customer ID")]
         public int CustomerID { get; set; }
+
+        public virtual Customers customers { get; set; }
 
         [StringLength(255)]
         [DisplayName("Customer Comments")]

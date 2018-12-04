@@ -37,8 +37,7 @@ namespace NorthwestLabs.Models
         [StringLength(30)]
         [DisplayName("Location State")]
         public string LocationState { get; set; }
-
-        [Required(ErrorMessage = "Location ZIP is required.")]
+        
         [StringLength(30)]
         [DisplayName("Location ZIP")]
         public string LocationZIP { get; set; }

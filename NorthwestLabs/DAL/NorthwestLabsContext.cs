@@ -5,7 +5,8 @@ using System.Web;
 
 namespace NorthwestLabs.DAL
 {
-    public class NorthwestLabsContext
+    public class NorthwestLabsContext : DbContext
     {
+        public 
     }
 }
