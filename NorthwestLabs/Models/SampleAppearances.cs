@@ -8,12 +8,12 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    [Table("SampleAppearances")]
     public class SampleAppearances
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Appearance ID")]
-        [Required(ErrorMessage ="Appearance ID is required.")]
         public int AppearanceID { get; set; }
         // Link back to Samples Table
         public virtual Samples samples { get; set; }

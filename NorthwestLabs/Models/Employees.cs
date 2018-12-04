@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // Employees Table
     [Table("Employees")]
     public class Employees
     {

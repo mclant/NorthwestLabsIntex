@@ -15,7 +15,6 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Material ID")]
-        [Required(ErrorMessage = "Material ID is required.")]
         public int MaterialID { get; set; }
         // Link back to TestMaterials Table
         public virtual TestMaterials testmaterials { get; set; }

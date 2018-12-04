@@ -15,12 +15,13 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("LT Number")]
-        [Required(ErrorMessage = "LT Number is required.")]
         public int LTNumber { get; set; }
         // Link back to AssayInstances Table
         public virtual AssayInstances assayinstances { get; set; }
         // Link back to Samples Table
         public virtual Samples samples { get; set; }
+        // Link back to the OrderDetails Table
+        public virtual OrderDetails orderdetails { get; set; }
 
         [StringLength(30, ErrorMessage ="Compound Name must not exceed 30 characters.")]
         [DisplayName("Compound Name")]

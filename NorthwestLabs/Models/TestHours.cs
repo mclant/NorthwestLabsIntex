@@ -8,9 +8,9 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
-    // TestMaterials Table
-    [Table("TestMaterials")]
-    public class TestMaterials
+    // TestHours Table
+    [Table("TestHours")]
+    public class TestHours
     {
         #region CompositePrimaryKey
         [Key, Column(Order = 1)]
@@ -20,15 +20,15 @@ namespace NorthwestLabs.Models
         public virtual SampleTests sampletests { get; set; }
 
         [Key, Column(Order = 2)]
-        [DisplayName("Material ID")]
-        [Required(ErrorMessage = "Material ID is required.")]
-        public int MaterialID { get; set; }
-        // Link back to Materials Table
-        public virtual Materials materials { get; set; }
+        [DisplayName("Employee ID")]
+        [Required(ErrorMessage = "Employee ID is required.")]
+        public int EmployeeID { get; set; }
+        // Link back to Employees Table
+        public virtual Employees employees { get; set; }
         #endregion
 
-        [DisplayName("Material Quantity")]
-        [Required(ErrorMessage = "Material Quantity is required")]
-        public int MaterialQty { get; set; }
+        [DisplayName("Hour Count")]
+        [Required(ErrorMessage = "Hour Count is required")]
+        public float HourCount { get; set; }
     }
 }

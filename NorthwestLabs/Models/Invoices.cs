@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // Invoices Table
     [Table("Invoices")]
     public class Invoices
     {
