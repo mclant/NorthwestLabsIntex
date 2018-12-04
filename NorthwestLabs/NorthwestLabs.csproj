@@ -152,9 +152,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AssayInstances.cs" />
+    <Compile Include="Models\AssayTypes.cs" />
     <Compile Include="Models\Compounds.cs" />
     <Compile Include="Models\SampleAppearances.cs" />
     <Compile Include="Models\Samples.cs" />
+    <Compile Include="Models\SampleTests.cs" />
+    <Compile Include="Models\TestTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

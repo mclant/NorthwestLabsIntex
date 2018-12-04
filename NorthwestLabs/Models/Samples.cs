@@ -17,6 +17,8 @@ namespace NorthwestLabs.Models
         [DisplayName("Compound Sequence Code")]
         [Required(ErrorMessage = "Compound Sequence Code is required")]
         public int CompoundSequenceCode { get; set; }
+        // Link back to SampleTests Table
+        public virtual SampleTests sampletests { get; set; }
 
         // Link to the Compound Table
         [DisplayName("LT Number")]
