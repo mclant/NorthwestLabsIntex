@@ -15,8 +15,10 @@ namespace NorthwestLabs.Models
         [DisplayName("Appearance ID")]
         [Required(ErrorMessage ="Appearance ID is required.")]
         public int AppearanceID { get; set; }
+        // Link back to Samples Table
+        public virtual Samples samples { get; set; }
 
-        [StringLength(30, ErrorMessage ="Appearance Description must not exceed 30 characters."]
+        [StringLength(30, ErrorMessage ="Appearance Description must not exceed 30 characters.")]
         [DisplayName("Appearance Description")]
         [Required(ErrorMessage ="Appearance Description is required.")]
         public string AppearanceDesc { get; set; }
