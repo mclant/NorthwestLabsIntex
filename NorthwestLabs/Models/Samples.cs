@@ -15,12 +15,11 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Compound Sequence Code")]
-        [Required(ErrorMessage = "Compound Sequence Code is required")]
         public int CompoundSequenceCode { get; set; }
         // Link back to SampleTests Table
         public virtual SampleTests sampletests { get; set; }
 
-        // Link to the Compound Table
+        // Link to the Compounds Table
         [DisplayName("LT Number")]
         [Required(ErrorMessage = "LT Number is required")]
         public int LTNumber { get; set; }

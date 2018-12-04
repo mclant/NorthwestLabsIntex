@@ -15,7 +15,6 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Test Type ID")]
-        [Required(ErrorMessage = "Test Type ID is required.")]
         public int TestTypeID { get; set; }
         // Link back to SampleTests Table
         public virtual SampleTests sampletests { get; set; }
