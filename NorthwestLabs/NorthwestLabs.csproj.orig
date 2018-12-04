@@ -155,13 +155,16 @@
     <Compile Include="Models\AssayInstances.cs" />
     <Compile Include="Models\AssayTypes.cs" />
     <Compile Include="Models\Compounds.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\Invoices.cs" />
     <Compile Include="Models\OrderComments.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\OrderStatuses.cs" />
+=======
     <Compile Include="Models\Materials.cs" />
+>>>>>>> model1
     <Compile Include="Models\SampleAppearances.cs" />
     <Compile Include="Models\Samples.cs" />
     <Compile Include="Models\SampleTests.cs" />

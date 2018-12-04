@@ -17,6 +17,8 @@ namespace NorthwestLabs.Models
         [DisplayName("Sample Test ID")]
         [Required(ErrorMessage = "Sample Test ID is required.")]
         public int SampleTestID { get; set; }
+        // Link back to TestMaterials Table
+        public virtual TestMaterials testmaterials { get; set; }
 
         // Link to the Samples Table
         [DisplayName("Sample ID")]
