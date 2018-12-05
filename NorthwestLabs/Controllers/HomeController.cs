@@ -14,7 +14,6 @@ namespace NorthwestLabs.Controllers
         // NorthwestLabs Database -> Hosted on Azure through Matt Lant's Account
         public NorthwestLabsContext db = new NorthwestLabsContext();
 
-
         public ActionResult Index()
         {
             return View();

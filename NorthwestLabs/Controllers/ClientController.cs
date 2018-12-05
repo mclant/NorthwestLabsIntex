@@ -11,6 +11,7 @@ namespace NorthwestLabs.Controllers
 {
     public class ClientController : Controller
     {
+        // instantiates a new dbcontext for use in controller
         NorthwestLabsContext db = new NorthwestLabsContext();
 
         // GET: Client
@@ -21,7 +22,6 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult GetAQuote()
         {
-
             return View();
         }
 
