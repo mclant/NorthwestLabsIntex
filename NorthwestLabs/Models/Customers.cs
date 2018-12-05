@@ -12,14 +12,14 @@ namespace NorthwestLabs.Models
     [Table("Customers")]
     public class Customers : System.Object
     {
-        [Key]
+        [Key, Required]
         [DisplayName("Customer ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerID { get; set; }
         // Link back to the Orders Table
-        public ICollection<Orders> order { get; set; }
+        public virtual ICollection<Orders> order { get; set; }
         // Link back to the PaymentAccounts Table
-        public ICollection<PaymentAccounts> paymentaccounts { get; set; }
+        public virtual ICollection<PaymentAccounts> paymentaccounts { get; set; }
 
         [Required(ErrorMessage = "Customer Name is required.")]
         [StringLength(30, ErrorMessage = "Customer Name must not exceed 30 characters.")]

@@ -12,12 +12,12 @@ namespace NorthwestLabs.Models
     [Table("SampleAppearances")]
     public class SampleAppearances
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Appearance ID")]
         public int AppearanceID { get; set; }
         // Link back to Samples Table
-        public ICollection<Samples> samples { get; set; }
+        public virtual ICollection<Samples> samples { get; set; }
 
         [StringLength(30, ErrorMessage ="Appearance Description must not exceed 30 characters.")]
         [DisplayName("Appearance Description")]

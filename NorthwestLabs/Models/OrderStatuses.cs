@@ -12,15 +12,16 @@ namespace NorthwestLabs.Models
     [Table("OrderStatuses")]
     public class OrderStatuses
     {
-        [Key]
+        [Key, Required]
         [DisplayName("Order Status ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderStatusID { get; set; }
         // Link back to the Orders Table
-        public ICollection<Orders> orders { get; set; }
+        public virtual ICollection<Orders> orders { get; set; }
 
         [DisplayName("Order Status Description")]
         [StringLength(30, ErrorMessage = "Order Status Description must not exceed 30 characters.")]
+        [Required(ErrorMessage ="Order Status Description is required.")]
         public string OrderStatusDesc { get; set; }
     }
 }
