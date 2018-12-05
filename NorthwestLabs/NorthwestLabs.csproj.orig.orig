@@ -219,6 +219,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Services\PharmacologyCatalog.cshtml" />
+<<<<<<< HEAD
     <Content Include="Web.config" />
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
     <None Include="Web.Debug.config">
@@ -228,9 +229,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Views\Client\GetAQuote.cshtml" />
+=======
     <Content Include="Views\Services\Details.cshtml" />
     <Content Include="Views\Services\ProtocolNotebook.cshtml" />
     <Content Include="Views\Services\Services.cshtml" />
+>>>>>>> boxer
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

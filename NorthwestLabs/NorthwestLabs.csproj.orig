@@ -148,12 +148,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\CompanyInfoController.cs" />
-=======
     <Compile Include="Controllers\ClientController.cs" />
-    <Compile Include="Controllers\CompanyInfo.cs" />
->>>>>>> newbeans
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -189,6 +185,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Photos\download.jpg" />
+    <Content Include="Content\Photos\list-clipart-check-list2.png" />
     <Content Include="Content\Photos\picu.jpg" />
     <Content Include="Content\Photos\ecdc671e-2b6f-46df-8d65-a9731f98b039.jpeg" />
     <Content Include="Content\Photos\labworker.png" />
@@ -221,7 +219,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Services\PharmacologyCatalog.cshtml" />
-<<<<<<< HEAD
     <Content Include="Web.config" />
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
     <None Include="Web.Debug.config">
@@ -230,9 +227,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-=======
     <Content Include="Views\Client\GetAQuote.cshtml" />
->>>>>>> newbeans
+    <Content Include="Views\Services\Details.cshtml" />
+    <Content Include="Views\Services\ProtocolNotebook.cshtml" />
+    <Content Include="Views\Services\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

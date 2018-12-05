@@ -29,7 +29,13 @@
             @Html.DisplayFor(modelItem => item.AssayProtocol)
         </td>
         <td>
+<<<<<<< HEAD
+            @Html.ActionLink("Edit", "Edit", new { id=item.AssayTypeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AssayTypeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AssayTypeID })
+=======
             @Html.ActionLink("Details", "Details", new { id=item.AssayTypeID })
+>>>>>>> boxer
         </td>
     </tr>
 }

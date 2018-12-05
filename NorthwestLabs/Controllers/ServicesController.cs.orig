@@ -6,7 +6,10 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using NorthwestLabs.DAL;
 using NorthwestLabs.Models;
+<<<<<<< HEAD
+=======
 using System.Net;
+>>>>>>> boxer
 
 namespace NorthwestLabs.Controllers
 {
@@ -33,10 +36,12 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult ProtocolNotebook()
         {
-		{
-
+<<<<<<< HEAD
+            return View();
+=======
             return View(db.TestType.ToList());
-            
+        }
+       
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -49,6 +54,7 @@ namespace NorthwestLabs.Controllers
                 return HttpNotFound();
             }
             return View(assayTypes);
+>>>>>>> boxer
         }
     }
 }

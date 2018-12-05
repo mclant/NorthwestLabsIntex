@@ -40,7 +40,11 @@ namespace NorthwestLabs.Models
         public bool TestTypeActive { get; set; }
 
         [DisplayName("Average Test Duration")]
+<<<<<<< HEAD
+        public DateTime? AverageTestDuration { get; set; }
+=======
         [Required(ErrorMessage = "Average Test Duration is required.")]
         public int AverageTestDurationHours { get; set; }
+>>>>>>> boxer
     }
 }
