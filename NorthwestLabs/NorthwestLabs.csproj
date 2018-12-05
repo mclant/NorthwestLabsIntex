@@ -221,6 +221,7 @@
     <Content Include="Views\Services\PharmacologyCatalog.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
+    <Content Include="Views\Client\PlaceQuote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

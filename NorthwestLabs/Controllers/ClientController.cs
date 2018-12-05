@@ -29,12 +29,28 @@ namespace NorthwestLabs.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult GetAQuote(Customers newcustomer)
         {
-            newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
-            db.Customer.Add(newcustomer);
-            db.SaveChanges();
             
+                newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
+           
+                if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
+                {
+                    db.Customer.Add(newcustomer);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                    return View();
+                }
 
-            return View();
+            Orders neworder = new Orders();
+            neworder.CustomerID = newcustomer.CustomerID;
+            neworder.OrderStatusID = 11;
+            neworder.DateRequested = DateTime.Now;
+            neworder.Quote = true;
+
+
+            return View("PlaceOrder");
         }
     }
 }
