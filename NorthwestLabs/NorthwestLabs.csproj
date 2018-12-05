@@ -181,6 +181,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Photos\picu.jpg" />
+    <Content Include="Content\Photos\ecdc671e-2b6f-46df-8d65-a9731f98b039.jpeg" />
     <Content Include="Content\Photos\labworker.png" />
     <Content Include="Content\Photos\labworker2.png" />
     <Content Include="favicon.ico" />

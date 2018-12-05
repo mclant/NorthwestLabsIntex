@@ -3,30 +3,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Northwest Labs, Inc.</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <a class="navbar-brand" href="~/Home/Index">
+                <img alt="Brand" src="~/Content/Photos/ecdc671e-2b6f-46df-8d65-a9731f98b039.jpeg"  height="40">
+                </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Northwest Labs", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" style="padding-top:8px">
+                <ul class="nav navbar-nav" style="padding-top:8px;font-family:Bahnschrift; font-weight:500" >
                     <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500" >
                             <!-- Company Information Drop-down list -->
                             Company Information
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
                             <li><a>@Html.ActionLink("About Us", "AboutUs", "CompanyInfo")</a></li>
                             <li><a>@Html.ActionLink("Contact Us", "Contact", "CompanyInfo")</a></li>
                             <li><a>@Html.ActionLink("Lab Pictures", "LabPics", "CompanyInfo")</a></li>
@@ -34,25 +38,25 @@
                             <li><a>@Html.ActionLink("About Our CEO", "AboutCEO", "CompanyInfo")</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    <li class="dropdown" style="font-family:Bahnschrift; font-weight:500">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500">
                             <!-- Services Drop-down list -->
                             Services
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
                             <li><a>@Html.ActionLink("Our Services", "Services", "Services")</a></li>
                             <li><a>@Html.ActionLink("Pharmacology Catalog", "PharmaCatalog", "Services")</a></li>
                             <li><a>@Html.ActionLink("Protocol Notebook", "ProtoNotebook", "Services")</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    <li>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500">
                             <!-- Client Portal Drop-down list -->
                             Client Portal
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
                             <li><a>@Html.ActionLink("Submit New Order", "NewOrder", "Client")</a></li>
                             <li><a>@Html.ActionLink("Get a Quote", "Contact", "Client")</a></li>
                             <li><a>@Html.ActionLink("View Orders", "LabPics", "Client")</a></li>
@@ -60,20 +64,20 @@
                             <li><a>@Html.ActionLink("About Our CEO", "AboutCEO", "Client")</a></li>
                         </ul>
                     </li>
-                    
+
                     <!-- Anchored to the right-side of the navbar -->
                     <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500">
                             <!-- Employee Portal Drop-down list -->
                             Employee Portal
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
                             <li><a>@Html.ActionLink("Admin", "Admin", "Employee")</a></li>
                             <li><a>@Html.ActionLink("Sales Employee", "SalesEmp", "Employee")</a></li>
                             <li><a>@Html.ActionLink("Head of Pharmacology", "PharmaHead", "Employee")</a></li>
                             <li><a>@Html.ActionLink("Lab Manager", "LabManager", "Employee")</a></li>
-                            <li><a>@Html.ActionLink("Technical Director of Pharmacology", "PharmaDirector", "Employee")</a></li>
+                            <li><a>@Html.ActionLink("Director of Pharmacology", "PharmaDirector", "Employee")</a></li>
                             <li><a>@Html.ActionLink("Lab Worker", "LabWorker", "Employee")</a></li>
                         </ul>
                     </li>
@@ -85,7 +89,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Northwest Labs</p>
         </footer>
     </div>
 
