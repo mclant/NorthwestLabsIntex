@@ -35,10 +35,11 @@ namespace NorthwestLabs.Models
         public string TestTypeProtocol { get; set; }
 
         [DisplayName("Test Type Active")]
+        [Required(ErrorMessage = "Test Type Active is required.")]
         public bool TestTypeActive { get; set; }
 
         [DisplayName("Average Test Duration")]
-        [Required(ErrorMessage = "Average Test Duration is required")]
+        [Required(ErrorMessage = "Average Test Duration is required.")]
         public DateTime AverageTestDuration { get; set; }
     }
 }

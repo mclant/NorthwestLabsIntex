@@ -8,17 +8,24 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // OrderDetails Table
     [Table("OrderDetails")]
     public class OrderDetails
     {
-        [Required(ErrorMessage = "Order ID is required")]
+        #region CompositePrimaryKey
+        [Key, Column(Order = 1)]
+        [DisplayName("Order ID")]
+        [Required(ErrorMessage = "Order ID is required.")]
         public int OrderID { get; set; }
-
+        // Link back to the Orders Table
         public virtual Orders orders { get; set; }
 
-        [Required(ErrorMessage = "LT Number is required")]
+        [Key, Column(Order = 2)]
+        [DisplayName("LT Number")]
+        [Required(ErrorMessage = "LT Number is required.")]
         public int LTNumber { get; set; }
-
+        // Link back to the Compound Table
         public virtual Compounds compounds { get; set; }
+        #endregion
     }
 }

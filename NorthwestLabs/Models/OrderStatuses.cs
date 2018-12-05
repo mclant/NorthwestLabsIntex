@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // OrderStatuses Table
     [Table("OrderStatuses")]
     public class OrderStatuses
     {
@@ -15,12 +16,11 @@ namespace NorthwestLabs.Models
         [DisplayName("Order Status ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderStatusID { get; set; }
-
+        // Link back to the Orders Table
         public virtual Orders orders { get; set; }
 
         [DisplayName("Order Status Description")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Order Status Description must not exceed 30 characters.")]
         public string OrderStatusDesc { get; set; }
-
     }
 }

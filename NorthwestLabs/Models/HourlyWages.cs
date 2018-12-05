@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // HourlyWages Table
     [Table("HourlyWages")]
     public class HourlyWages
     {
@@ -15,13 +16,11 @@ namespace NorthwestLabs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Hourly Wage ID")]
         public int HourlyWageID { get; set; }
-
+        // Link back to the Employees Table
         public virtual Employees employees { get; set; }
 
         [Required(ErrorMessage = "Hourly Wage Amount is required.")]
         [DisplayName("Hourly Wage Amount")]
         public int HourlyWageAmount { get; set; }
     }
-
-
 }

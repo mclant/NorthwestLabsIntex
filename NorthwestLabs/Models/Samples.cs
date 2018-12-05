@@ -21,7 +21,7 @@ namespace NorthwestLabs.Models
 
         // Link to the Compounds Table
         [DisplayName("LT Number")]
-        [Required(ErrorMessage = "LT Number is required")]
+        [Required(ErrorMessage = "LT Number is required.")]
         public int LTNumber { get; set; }
         public virtual Compounds compounds { get; set; }
 
@@ -37,7 +37,7 @@ namespace NorthwestLabs.Models
         public int? AppearanceID { get; set; }
         public virtual SampleAppearances sampleappearances { get; set; }
 
-        [Required(ErrorMessage = "Weight in milligrams is required")]
+        [Required(ErrorMessage = "Weight in milligrams is required.")]
         [DisplayName("Weight (mg)")]
         public float Weight { get; set; }
 

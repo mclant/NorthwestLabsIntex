@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // EmployeePositions Table
     [Table("Employee Positions")]
     public class EmployeePositions
     {
@@ -15,9 +16,11 @@ namespace NorthwestLabs.Models
         [DisplayName("Position ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeePositionID { get; set; }
+        // Link back to the Orders Table
+        public virtual Orders order { get; set; }
 
         [Required(ErrorMessage = "Position Description is required.")]
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Position Description must not exceed 50 characters.")]
         [DisplayName("Position Description")]
         public string PositionDesc { get; set; }
     }

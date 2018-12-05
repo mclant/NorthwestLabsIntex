@@ -8,6 +8,7 @@ using System.Web;
 
 namespace NorthwestLabs.Models
 {
+    // SampleAppearances Table
     [Table("SampleAppearances")]
     public class SampleAppearances
     {

@@ -16,50 +16,54 @@ namespace NorthwestLabs.Models
         [DisplayName("Employee ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeID { get; set; }
+        // Link back to the Orders Table
+        public virtual Orders orders { get; set; }
+        // LInk back to the TestHours Table
+        public virtual TestHours testhours { get; set; }
 
+        // Link to the EmployeePositions Table
         [Required(ErrorMessage = "Position ID is required.")]
         [DisplayName("Position ID")]
         public int PositionID { get; set; }
-
         public virtual EmployeePositions employeepositions { get; set; }
 
+        // Link to the HourlyWages Table
         [Required(ErrorMessage = "Hourly Wage ID is required.")]
         [DisplayName("Hourly Wage ID")]
         public int HourlyWageID { get; set; }
-
         public virtual HourlyWages hourlywages { get; set; }
 
         [Required(ErrorMessage = "Employee First Name is required.")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Employee First Name must not exceed 30 characters.")]
         [DisplayName("Employee First Name")]
         public string EmployeeFName { get; set; }
 
         [Required(ErrorMessage = "Employee Last Name is required.")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Employee Last Name must not exceed 30 characters.")]
         [DisplayName("Employee Last Name")]
         public string EmployeeLName { get; set; }
 
         [Required(ErrorMessage = "Employee Phone is required.")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Employee Phone must not exceed 30 characters.")]
         [DisplayName("Employee Phone")]
         public string EmployeePhone { get; set; }
 
         [Required(ErrorMessage = "Employee Email is required.")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Employee Email must not exceed 30 characters.")]
         [DisplayName("Employee Email")]
         public string EmployeeEmail { get; set; }
 
+        // Link to the Logins Table
         [Required(ErrorMessage = "Login Username is required.")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "Login Username must not exceed 30 characters.")]
         [DisplayName("Login Username")]
         public string LoginUserName { get; set; }
-
         public virtual Logins logins { get; set; }
 
+        // Link to the Locations Table
         [Required(ErrorMessage = "Location ID is required.")]
         [DisplayName("Location ID")]
         public int LocationID { get; set; }
-
         public virtual Locations locations { get; set; }
     }
 }

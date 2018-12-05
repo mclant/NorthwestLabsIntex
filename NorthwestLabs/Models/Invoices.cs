@@ -16,16 +16,18 @@ namespace NorthwestLabs.Models
         [DisplayName("Invoice ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvoiceID { get; set; }
+        // Link back to the Orders Table
+        public virtual Orders orders { get; set; }
 
-        [Required(ErrorMessage = "Payment Due Date is required")]
+        [Required(ErrorMessage = "Payment Due Date is required.")]
         [DisplayName("Payment Due Date")]
         public DateTime PaymentDueDate { get; set; }
 
-        [Required(ErrorMessage = "Early Payment Date is required")]
+        [Required(ErrorMessage = "Early Payment Date is required.")]
         [DisplayName("Early Payment Date")]
         public DateTime EarlyPaymentDate { get; set; }
 
-        [Required(ErrorMessage = "Early Payment Discount is required")]
+        [Required(ErrorMessage = "Early Payment Discount is required.")]
         [DisplayName("Early Payment Discount")]
         public float EarlyPaymentDiscount { get; set; }
 

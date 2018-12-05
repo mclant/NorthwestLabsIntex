@@ -21,7 +21,7 @@ namespace NorthwestLabs.Models
 
         // Link to the Samples Table
         [DisplayName("Sample ID")]
-        [Required(ErrorMessage = "Sample ID is required")]
+        [Required(ErrorMessage = "Sample ID is required.")]
         public int SampleID { get; set; }
         public virtual Samples samples { get; set; }
 
@@ -36,18 +36,18 @@ namespace NorthwestLabs.Models
 
         // Link to the AssayInstances Table
         [DisplayName("Assay ID")]
-        [Required(ErrorMessage = "Assay ID is required")]
+        [Required(ErrorMessage = "Assay ID is required.")]
         public int AssayID { get; set; }
         public virtual AssayInstances assayinstances { get; set; }
 
         // Link to the TestTypes Table
         [DisplayName("Test Type ID")]
-        [Required(ErrorMessage = "Test Type ID is required")]
+        [Required(ErrorMessage = "Test Type ID is required.")]
         public int TestTypeID { get; set; }
         public virtual TestTypes testtypes { get; set; }
 
         [DisplayName("Required for Assay")]
-        [Required(ErrorMessage = "Required for Assay is required")]
+        [Required(ErrorMessage = "Required for Assay is required.")]
         public bool RequiredForAssay { get; set; }
 
         [DisplayName("Active/Not Active")]
