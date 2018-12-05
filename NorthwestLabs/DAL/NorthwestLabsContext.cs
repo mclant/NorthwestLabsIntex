@@ -15,6 +15,8 @@ namespace NorthwestLabs.DAL
 
         }
 
+        private string query = "SELECT TABLE_NAME FROM NorthwestLabs.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';";
+
         public DbSet<AssayInstances> AssayInstance { get; set; }
         public DbSet<AssayTypes> AssayType { get; set; }
         public DbSet<CompanyInfo> CompanyInfos { get; set; }
@@ -38,6 +40,5 @@ namespace NorthwestLabs.DAL
         public DbSet<TestHours> TestHour { get; set; }
         public DbSet<TestMaterials> TestMaterial { get; set; }
         public DbSet<TestTypes> TestType { get; set; }
-
     }
 }

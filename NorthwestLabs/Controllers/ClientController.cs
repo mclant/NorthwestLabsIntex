@@ -22,6 +22,9 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult GetAQuote()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
 
@@ -29,7 +32,6 @@ namespace NorthwestLabs.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult GetAQuote(Customers newcustomer)
         {
-            
                 newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
            
                 if (db.Login.Find(newcustomer.logins.LoginUserName) == null)

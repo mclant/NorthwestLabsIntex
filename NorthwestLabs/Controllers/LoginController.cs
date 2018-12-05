@@ -15,8 +15,8 @@ namespace NorthwestLabs.Controllers
         NorthwestLabsContext db = new NorthwestLabsContext();
 
         // Getters and Setters for LoginUsername and 
-        public string sUsername { get; set; }
-        public string sPassword { get; set; }
+        public static string sUsername { get; set; }
+        public static string sPassword { get; set; }
 
         // GET: Login
         public ActionResult Login()
@@ -36,7 +36,7 @@ namespace NorthwestLabs.Controllers
             if ((sUsername == "Labtech") && (sPassword == "Success"))
             {return RedirectToAction("<<LABTECH VIEW AFTER LOGIN>>", "Employee");}
             if ((sUsername == "Admin") && (sPassword == "Success"))
-            {return RedirectToAction("<<ADMIN VIEW AFTER LOGIN>>", "Employee");}
+            {return RedirectToAction("Admin", "Employee");}
             if ((sUsername == "Director") && (sPassword == "Success"))
             {return RedirectToAction("<<DIRECTOR VIEW AFTER LOGIN>>", "Employee");}
             if ((sUsername == "Finance") && (sPassword == "Success"))

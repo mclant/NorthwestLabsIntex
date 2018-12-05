@@ -23,31 +23,49 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult Admin()
         {
-            return View();
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
+            return RedirectToAction("Index", "Admin");
         }
 
         public ActionResult SalesEmployee()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
 
         public ActionResult PharmacologyHead()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
 
         public ActionResult LabManager()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
 
         public ActionResult PharmacologyDirector()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
 
         public ActionResult LabWorker()
         {
+            if (LoginController.sUsername == null)
+            { RedirectToAction("Login", "Login"); }
+
             return View();
         }
     }
