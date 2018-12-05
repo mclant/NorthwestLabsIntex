@@ -224,9 +224,11 @@
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
 <<<<<<< HEAD
     <Content Include="Views\Login\Login.cshtml" />
-=======
     <Content Include="Views\Client\PlaceQuote.cshtml" />
->>>>>>> newbeans
+=======
+    <Content Include="Views\Employee\LabTech.cshtml" />
+    <Content Include="Views\Employee\QuoteInbox.cshtml" />
+>>>>>>> BYU
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

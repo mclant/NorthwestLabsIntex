@@ -3,7 +3,13 @@
 @{
     ViewBag.Title = "ProtocolNotebook";
 }
-
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Services","Services")">Services</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Protocol Network</li>
+    </ol>
+</nav>
 <h2>ProtocolNotebook</h2>
 
 
@@ -24,22 +30,23 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestTypeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestTypeDesc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestTypeProtocol)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AverageTestDurationHours)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestTypeDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestTypeProtocol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageTestDurationHours)
+            </td>
 
-    </tr>
-}
+        </tr>
+    }
 
 </table>
