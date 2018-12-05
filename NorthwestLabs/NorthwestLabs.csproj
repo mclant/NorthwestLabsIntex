@@ -155,6 +155,7 @@
     </Compile>
     <Compile Include="Models\AssayInstances.cs" />
     <Compile Include="Models\AssayTypes.cs" />
+    <Compile Include="Models\CompanyInfo.cs" />
     <Compile Include="Models\Compounds.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\EmployeePositions.cs" />
@@ -162,13 +163,18 @@
     <Compile Include="Models\HourlyWages.cs" />
     <Compile Include="Models\Invoices.cs" />
     <Compile Include="Models\Locations.cs" />
+    <Compile Include="Models\Logins.cs" />
+    <Compile Include="Models\Materials.cs" />
     <Compile Include="Models\OrderComments.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\OrderStatuses.cs" />
+    <Compile Include="Models\PaymentAccounts.cs" />
     <Compile Include="Models\SampleAppearances.cs" />
     <Compile Include="Models\Samples.cs" />
     <Compile Include="Models\SampleTests.cs" />
+    <Compile Include="Models\TestHours.cs" />
+    <Compile Include="Models\TestMaterials.cs" />
     <Compile Include="Models\TestTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
