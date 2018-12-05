@@ -37,10 +37,10 @@ namespace NorthwestLabs.Models
         public string LabComments { get; set; }
 
         [DisplayName("Order Total")]
-        public float? OrderTotal { get; set; }
+        public double? OrderTotal { get; set; }
 
         [DisplayName("Order Discount")]
-        public float? OrderDiscount { get; set; }
+        public double? OrderDiscount { get; set; }
 
         // Link to the OrderStatuses Table
         [DisplayName("Order Status ID")]
@@ -70,6 +70,7 @@ namespace NorthwestLabs.Models
         public bool Quote { get; set; }
 
         [DisplayName("Quote Price")]
+        [Range(0, double.MaxValue, ErrorMessage = "Please enter valid number")]
         public decimal? QuotePrice { get; set; }
 
         // Link to the Invoices Table
