@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-<<<<<<< Updated upstream
-=======
 using NorthwestLabs.Models;
->>>>>>> Stashed changes
 
 namespace NorthwestLabs.DAL
 {
     public class NorthwestLabsContext : DbContext
     {
-<<<<<<< Updated upstream
-        public 
-=======
         public NorthwestLabsContext() :
             base("NorthwestLabsContext")
         {
@@ -45,6 +39,5 @@ namespace NorthwestLabs.DAL
         public DbSet<TestMaterials> TestMaterial { get; set; }
         public DbSet<TestTypes> TestType { get; set; }
 
->>>>>>> Stashed changes
     }
 }
