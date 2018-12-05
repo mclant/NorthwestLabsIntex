@@ -33,9 +33,8 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult ProtocolNotebook()
         {
-		{
-
             return View(db.TestType.ToList());
+        }
             
         public ActionResult Details(int? id)
         {
