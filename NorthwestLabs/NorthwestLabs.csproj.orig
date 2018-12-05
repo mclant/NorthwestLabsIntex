@@ -152,6 +152,7 @@
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="DAL\NorthwestLabsContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,6 +222,11 @@
     <Content Include="Views\Services\PharmacologyCatalog.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Login\Login.cshtml" />
+=======
+    <Content Include="Views\Client\PlaceQuote.cshtml" />
+>>>>>>> newbeans
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

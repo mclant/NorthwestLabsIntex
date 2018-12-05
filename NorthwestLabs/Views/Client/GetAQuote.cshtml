@@ -6,6 +6,11 @@
 
 <h2>GetAQuote</h2>
 
+@if (ViewBag.error != null)
+{
+    <p style="color:red">@ViewBag.error</p>
+}
+
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
