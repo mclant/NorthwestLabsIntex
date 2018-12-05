@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NorthwestLabs.Models.TestTypes>
+
+@{
+    ViewBag.Title = "ProtocolNotebook";
+}
+
+<h2>ProtocolNotebook</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TestTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestTypeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestTypeProtocol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AverageTestDurationHours)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestTypeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestTypeProtocol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AverageTestDurationHours)
+        </td>
+
+    </tr>
+}
+
+</table>

@@ -1,0 +1,24 @@
+﻿@model NorthwestLabs.Models.AssayTypes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.AssayName)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.AssayProtocol)
+    </dd>
+
+
+
+</dl>
+
+<p>
+    @Html.ActionLink("Back to List", "PharmacologyCatalog")
+</p>
