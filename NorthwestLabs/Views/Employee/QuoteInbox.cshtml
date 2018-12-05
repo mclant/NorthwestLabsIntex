@@ -1,0 +1,83 @@
+﻿@model IEnumerable<NorthwestLabs.Models.Orders>
+
+@{
+    ViewBag.Title = "QuoteInbox";
+}
+
+<h2>QuoteInbox</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.customers.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LabComments)
+        </th>
+        <th>
+            Date Requested
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RunAllTests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuotePrice)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.customers.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LabComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRequested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RunAllTests)
+        </td>
+        <td>
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.EditorFor(model => item.QuotePrice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DisplayFor(model => item.OrderID)
+                    @Html.ValidationMessageFor(model => item.QuotePrice, "", new { @class = "text-danger" })
+                    @if (ViewBag.output != null)
+                    {
+                        <p style="color:darkblue">ViewBag.output</p>
+                    }
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Add Quote" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+
+
+    </tr>
+}
+
+</table>
