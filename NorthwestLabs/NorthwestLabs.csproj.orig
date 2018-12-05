@@ -148,26 +148,40 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\CompanyInfoController.cs" />
+=======
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\CompanyInfo.cs" />
+>>>>>>> newbeans
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="DAL\NorthwestLabsContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AssayInstances.cs" />
     <Compile Include="Models\AssayTypes.cs" />
+    <Compile Include="Models\CompanyInfo.cs" />
     <Compile Include="Models\Compounds.cs" />
-<<<<<<< HEAD
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\EmployeePositions.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\HourlyWages.cs" />
     <Compile Include="Models\Invoices.cs" />
+    <Compile Include="Models\Locations.cs" />
+    <Compile Include="Models\Logins.cs" />
+    <Compile Include="Models\Materials.cs" />
     <Compile Include="Models\OrderComments.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\OrderStatuses.cs" />
-=======
-    <Compile Include="Models\Materials.cs" />
->>>>>>> model1
+    <Compile Include="Models\PaymentAccounts.cs" />
     <Compile Include="Models\SampleAppearances.cs" />
     <Compile Include="Models\Samples.cs" />
     <Compile Include="Models\SampleTests.cs" />
+    <Compile Include="Models\TestHours.cs" />
     <Compile Include="Models\TestMaterials.cs" />
     <Compile Include="Models\TestTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,6 +189,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Photos\picu.jpg" />
+    <Content Include="Content\Photos\ecdc671e-2b6f-46df-8d65-a9731f98b039.jpeg" />
+    <Content Include="Content\Photos\labworker.png" />
+    <Content Include="Content\Photos\labworker2.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -195,13 +213,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -209,9 +220,23 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Services\PharmacologyCatalog.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Web.config" />
+    <Content Include="Views\CompanyInfo\Contact.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+=======
+    <Content Include="Views\Client\GetAQuote.cshtml" />
+>>>>>>> newbeans
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AboutUs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

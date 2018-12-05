@@ -51,7 +51,7 @@ namespace NorthwestLabs.Models
         [StringLength(30, ErrorMessage = "Login Username must not exceed 30 characters.")]
         [DisplayName("Login Username")]
         [ForeignKey("logins")]
-        public string LoginUserNameID { get; set; }
+        public string LoginUserName { get; set; }
         public Logins logins { get; set; }
     }
 }
