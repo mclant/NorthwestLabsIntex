@@ -1,0 +1,52 @@
+﻿@model IEnumerable<NorthwestLabs.Models.CompanyInfo>
+
+@{
+    ViewBag.Title = "Contact Us - Northwest Labs";
+}
+
+<h2>Contact Us</h2>
+<div class="row">
+    <div class="jumbotron">
+        <p>We would love to help in any way we can:</p>
+        <p>    
+            For billing and/or customer service related questions, contact our Seattle corporate office.
+            If you have a question regarding your test results, orders, or general assay/test questions, 
+            please contact our Singapore office.
+        </p>
+    </div>
+</div>
+
+<table class="table">
+    <tr class="row">
+        <th class="col-md-4">
+            <h3>Office Address</h3>
+        </th>
+        <th class="col-md-4">
+            <h3>Phone Number</h3>
+        </th>
+        <th class="col-md-4">
+            <h3>Email</h3>
+        </th>
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+    <tr class="row">
+        <td class="col-md-4">
+            <p>
+                @Html.DisplayFor(modelItem => item.CompanyAddress)
+            </p>
+        </td>
+        <td class="col-md-4">
+            <p>
+                @Html.DisplayFor(modelItem => item.CompanyPhone)
+            </p>
+        </td>
+        <td class="col-md-4">
+            <p>
+                @Html.DisplayFor(modelItem => item.CompanyEmail)
+            </p>
+        </td>
+    </tr>
+    }
+</table>

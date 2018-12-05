@@ -9,8 +9,9 @@ using NorthwestLabs.Models;
 
 namespace NorthwestLabs.Controllers
 {
-    public class CompanyInfo : Controller
+    public class CompanyInfoController : Controller
     {
+        // New DBContext for the CompanyInfo controller
         NorthwestLabsContext db = new NorthwestLabsContext();
 
         // GET: AboutUs
@@ -20,6 +21,26 @@ namespace NorthwestLabs.Controllers
         }
 
         public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View(db.CompanyInfos.ToList());
+        }
+
+        public ActionResult LabPics()
+        {
+            return View();
+        }
+
+        public ActionResult Mission()
+        {
+            return View();
+        }
+
+        public ActionResult AboutCEO()
         {
             return View();
         }
