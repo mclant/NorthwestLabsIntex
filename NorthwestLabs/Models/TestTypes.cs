@@ -17,7 +17,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Test Type ID")]
         public int TestTypeID { get; set; }
         // Link back to SampleTests Table
-        public virtual SampleTests sampletests { get; set; }
+        public ICollection<SampleTests> sampletests { get; set; }
 
         [StringLength(30, ErrorMessage = "Test Type Name must not exceed 30 characters.")]
         [DisplayName("Test Type Name")]

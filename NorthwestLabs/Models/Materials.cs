@@ -17,7 +17,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Material ID")]
         public int MaterialID { get; set; }
         // Link back to TestMaterials Table
-        public virtual TestMaterials testmaterials { get; set; }
+        public ICollection<TestMaterials> testmaterials { get; set; }
 
         [DisplayName("Material Name")]
         [Required(ErrorMessage = "Material Name is required.")]

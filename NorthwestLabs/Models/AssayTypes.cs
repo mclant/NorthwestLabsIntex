@@ -15,9 +15,10 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Assay Type ID")]
+        [Required]
         public int AssayTypeID { get; set; }
         // Link back to AssayInstances Table
-        public virtual AssayInstances assayinstances { get; set; }
+        public ICollection<AssayInstances> assayinstances { get; set; }
 
         [StringLength(30, ErrorMessage = "Assay Name must not exceed 30 characters.")]
         [DisplayName("Assay Name")]
@@ -28,5 +29,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Assay Protocol")]
         [Required(ErrorMessage = "Assay Protocol is required.")]
         public string AssayProtocol { get; set; }
+
+
     }
 }

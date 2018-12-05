@@ -17,15 +17,16 @@ namespace NorthwestLabs.Models
         [DisplayName("Order ID")]
         public int OrderID { get; set; }
         // Link back to the OrderDetails Table
-        public virtual OrderDetails orderdetails { get; set; }
+        public ICollection<OrderDetails> orderdetails { get; set; }
         // Link back to the OrderComments Table
-        public virtual OrderComments ordercomments { get; set; }
+        public ICollection<OrderComments> ordercomments { get; set; }
 
         // Link to the Customers Table
+        [ForeignKey("customers")]
         [Required(ErrorMessage = "You must enter your Customer ID")]
         [DisplayName("Customer ID")]
         public int CustomerID { get; set; }
-        public virtual Customers customers { get; set; }
+        public Customers customers { get; set; }
 
         [StringLength(255, ErrorMessage = "Customer Comments must not exceed 255 characters.")]
         [DisplayName("Customer Comments")]
@@ -43,11 +44,13 @@ namespace NorthwestLabs.Models
 
         // Link to the OrderStatuses Table
         [DisplayName("Order Status ID")]
+        [ForeignKey("orderstatuses")]
         public int? OrderStatusID { get; set; }
         public virtual OrderStatuses orderstatuses { get; set; }
 
         // Link to the Employees Table
         [DisplayName("Employee ID")]
+        [ForeignKey("employees")]
         public int? EmployeeID { get; set; }
         public virtual Employees employees { get; set; }
 
@@ -71,6 +74,7 @@ namespace NorthwestLabs.Models
 
         // Link to the Invoices Table
         [DisplayName("Invoice ID")]
+        [ForeignKey("invoices")]
         public int? InvoiceID { get; set; }
         public virtual Invoices invoices { get; set; }
     }

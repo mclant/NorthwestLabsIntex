@@ -17,21 +17,23 @@ namespace NorthwestLabs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeID { get; set; }
         // Link back to the Orders Table
-        public virtual Orders orders { get; set; }
+        public ICollection<Orders> orders { get; set; }
         // LInk back to the TestHours Table
-        public virtual TestHours testhours { get; set; }
+        public ICollection<TestHours> testhours { get; set; }
 
         // Link to the EmployeePositions Table
         [Required(ErrorMessage = "Position ID is required.")]
         [DisplayName("Position ID")]
+        [ForeignKey("employeepositions")]
         public int PositionID { get; set; }
         public virtual EmployeePositions employeepositions { get; set; }
 
         // Link to the HourlyWages Table
         [Required(ErrorMessage = "Hourly Wage ID is required.")]
         [DisplayName("Hourly Wage ID")]
+        [ForeignKey("hourlywages")]
         public int HourlyWageID { get; set; }
-        public virtual HourlyWages hourlywages { get; set; }
+        public HourlyWages hourlywages { get; set; }
 
         [Required(ErrorMessage = "Employee First Name is required.")]
         [StringLength(30, ErrorMessage = "Employee First Name must not exceed 30 characters.")]
@@ -57,12 +59,14 @@ namespace NorthwestLabs.Models
         [Required(ErrorMessage = "Login Username is required.")]
         [StringLength(30, ErrorMessage = "Login Username must not exceed 30 characters.")]
         [DisplayName("Login Username")]
+        [ForeignKey("logins")]
         public string LoginUserName { get; set; }
         public virtual Logins logins { get; set; }
 
         // Link to the Locations Table
         [Required(ErrorMessage = "Location ID is required.")]
         [DisplayName("Location ID")]
+        [ForeignKey("locations")]
         public int LocationID { get; set; }
         public virtual Locations locations { get; set; }
     }

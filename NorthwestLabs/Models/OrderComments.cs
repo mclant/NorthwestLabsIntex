@@ -15,6 +15,7 @@ namespace NorthwestLabs.Models
         // Link to the Orders Table
         [Required(ErrorMessage = "Order ID is required.")]
         [DisplayName("Order ID")]
+        [ForeignKey("orders")]
         public int OrderID { get; set; }
         public virtual Orders orders { get; set; }
 

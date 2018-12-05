@@ -17,11 +17,12 @@ namespace NorthwestLabs.Models
         [DisplayName("Compound Sequence Code")]
         public int CompoundSequenceCode { get; set; }
         // Link back to SampleTests Table
-        public virtual SampleTests sampletests { get; set; }
+        public ICollection<SampleTests> sampletests { get; set; }
 
         // Link to the Compounds Table
         [DisplayName("LT Number")]
         [Required(ErrorMessage = "LT Number is required.")]
+        [ForeignKey("compounds")]
         public int LTNumber { get; set; }
         public virtual Compounds compounds { get; set; }
 
@@ -34,6 +35,7 @@ namespace NorthwestLabs.Models
 
         // Link to the SampleAppearances Table
         [DisplayName("Appearance ID")]
+        [ForeignKey("sampleappearances")]
         public int? AppearanceID { get; set; }
         public virtual SampleAppearances sampleappearances { get; set; }
 

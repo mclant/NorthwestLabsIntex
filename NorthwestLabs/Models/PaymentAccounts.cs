@@ -15,6 +15,7 @@ namespace NorthwestLabs.Models
         // Link to the Customers Table
         [DisplayName("Customer ID")]
         [Required(ErrorMessage = "Customer ID is required.")]
+        [ForeignKey("customer")]
         public int CustomerID { get; set; }
         // Link back to the Customers Table
         public virtual Customers customer { get; set; }

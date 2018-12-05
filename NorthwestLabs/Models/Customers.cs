@@ -10,16 +10,16 @@ namespace NorthwestLabs.Models
 {
     // Customers Table
     [Table("Customers")]
-    public class Customers
+    public class Customers : System.Object
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Customer ID")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerID { get; set; }
         // Link back to the Orders Table
-        public virtual Orders order { get; set; }
+        public ICollection<Orders> order { get; set; }
         // Link back to the PaymentAccounts Table
-        public virtual PaymentAccounts paymentaccounts { get; set; }
+        public ICollection<PaymentAccounts> paymentaccounts { get; set; }
 
         [Required(ErrorMessage = "Customer Name is required.")]
         [StringLength(30, ErrorMessage = "Customer Name must not exceed 30 characters.")]
@@ -41,7 +41,7 @@ namespace NorthwestLabs.Models
         [EmailAddress]
         [DisplayName("Customer Email")]
         public string CustomerEmail { get; set; }
-        
+
         [Required(ErrorMessage = "Customer Balance is required.")]
         [DisplayName("Customer Balance")]
         public decimal CustomerBalance { get; set; }
@@ -50,7 +50,8 @@ namespace NorthwestLabs.Models
         [Required(ErrorMessage = "Login Username is required.")]
         [StringLength(30, ErrorMessage = "Login Username must not exceed 30 characters.")]
         [DisplayName("Login Username")]
-        public string LoginUserName { get; set; }
-        public virtual Logins logins { get; set; }
+        [ForeignKey("logins")]
+        public string LoginUserNameID { get; set; }
+        public Logins logins { get; set; }
     }
 }

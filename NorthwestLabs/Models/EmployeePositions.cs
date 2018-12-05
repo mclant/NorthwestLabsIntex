@@ -17,7 +17,7 @@ namespace NorthwestLabs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeePositionID { get; set; }
         // Link back to the Orders Table
-        public virtual Orders order { get; set; }
+        public ICollection<Employees> employees { get; set; }
 
         [Required(ErrorMessage = "Position Description is required.")]
         [StringLength(50, ErrorMessage = "Position Description must not exceed 50 characters.")]

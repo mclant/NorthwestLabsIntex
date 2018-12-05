@@ -15,13 +15,17 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Sample Test ID")]
+        [Required]
         public int SampleTestID { get; set; }
         // Link back to TestMaterials Table
-        public virtual TestMaterials testmaterials { get; set; }
+        public ICollection<TestMaterials> testmaterials { get; set; }
+        // Link back to the TestHours Table
+        public ICollection<TestHours> testhours { get; set; }
 
         // Link to the Samples Table
         [DisplayName("Sample ID")]
         [Required(ErrorMessage = "Sample ID is required.")]
+        [ForeignKey("samples")]
         public int SampleID { get; set; }
         public virtual Samples samples { get; set; }
 
@@ -37,12 +41,14 @@ namespace NorthwestLabs.Models
         // Link to the AssayInstances Table
         [DisplayName("Assay ID")]
         [Required(ErrorMessage = "Assay ID is required.")]
+        [ForeignKey("assayinstances")]
         public int AssayID { get; set; }
         public virtual AssayInstances assayinstances { get; set; }
 
         // Link to the TestTypes Table
         [DisplayName("Test Type ID")]
         [Required(ErrorMessage = "Test Type ID is required.")]
+        [ForeignKey("testtypes")]
         public int TestTypeID { get; set; }
         public virtual TestTypes testtypes { get; set; }
 

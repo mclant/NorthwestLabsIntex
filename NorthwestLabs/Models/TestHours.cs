@@ -13,13 +13,13 @@ namespace NorthwestLabs.Models
     public class TestHours
     {
         #region CompositePrimaryKey
-        [Key, Column(Order = 1)]
+        [Key, Column(Order = 1), ForeignKey("sampletests")]
         [DisplayName("Test ID")]
         public int TestID { get; set; }
         // Link back to SampleTests Table
         public virtual SampleTests sampletests { get; set; }
 
-        [Key, Column(Order = 2)]
+        [Key, Column(Order = 2), ForeignKey("employees")]
         [DisplayName("Employee ID")]
         [Required(ErrorMessage = "Employee ID is required.")]
         public int EmployeeID { get; set; }

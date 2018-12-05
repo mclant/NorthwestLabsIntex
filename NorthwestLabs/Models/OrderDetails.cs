@@ -13,14 +13,14 @@ namespace NorthwestLabs.Models
     public class OrderDetails
     {
         #region CompositePrimaryKey
-        [Key, Column(Order = 1)]
+        [Key, Column(Order = 1), ForeignKey("orders")]
         [DisplayName("Order ID")]
         [Required(ErrorMessage = "Order ID is required.")]
         public int OrderID { get; set; }
         // Link back to the Orders Table
         public virtual Orders orders { get; set; }
 
-        [Key, Column(Order = 2)]
+        [Key, Column(Order = 2), ForeignKey("compounds")]
         [DisplayName("LT Number")]
         [Required(ErrorMessage = "LT Number is required.")]
         public int LTNumber { get; set; }

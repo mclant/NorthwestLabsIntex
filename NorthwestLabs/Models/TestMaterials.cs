@@ -13,14 +13,14 @@ namespace NorthwestLabs.Models
     public class TestMaterials
     {
         #region CompositePrimaryKey
-        [Key, Column(Order = 1)]
+        [Key, Column(Order = 1), ForeignKey("sampletests")]
         [DisplayName("Test ID")]
         [Required(ErrorMessage = "Test ID is required.")]
         public int TestID { get; set; }
         // Link back to SampleTests Table
         public virtual SampleTests sampletests { get; set; }
 
-        [Key, Column(Order = 2)]
+        [Key, Column(Order = 2), ForeignKey("materials")]
         [DisplayName("Material ID")]
         [Required(ErrorMessage = "Material ID is required.")]
         public int MaterialID { get; set; }

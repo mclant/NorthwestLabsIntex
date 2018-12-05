@@ -16,8 +16,6 @@ namespace NorthwestLabs.Models
         [DisplayName("Invoice ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvoiceID { get; set; }
-        // Link back to the Orders Table
-        public virtual Orders orders { get; set; }
 
         [Required(ErrorMessage = "Payment Due Date is required.")]
         [DisplayName("Payment Due Date")]

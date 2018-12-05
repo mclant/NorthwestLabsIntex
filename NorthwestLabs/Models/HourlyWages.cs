@@ -17,7 +17,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Hourly Wage ID")]
         public int HourlyWageID { get; set; }
         // Link back to the Employees Table
-        public virtual Employees employees { get; set; }
+        public ICollection<Employees> employees { get; set; }
 
         [Required(ErrorMessage = "Hourly Wage Amount is required.")]
         [DisplayName("Hourly Wage Amount")]

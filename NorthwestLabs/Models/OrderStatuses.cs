@@ -17,7 +17,7 @@ namespace NorthwestLabs.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderStatusID { get; set; }
         // Link back to the Orders Table
-        public virtual Orders orders { get; set; }
+        public ICollection<Orders> orders { get; set; }
 
         [DisplayName("Order Status Description")]
         [StringLength(30, ErrorMessage = "Order Status Description must not exceed 30 characters.")]
