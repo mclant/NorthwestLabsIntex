@@ -16,7 +16,7 @@ namespace NorthwestLabs.Models
         [Required(ErrorMessage = "Customer ID is required.")]
         public int CustomerID { get; set; }
         // Link back to the Customers Table
-        public virtual Customer customer { get; set; }
+        public virtual Customers customer { get; set; }
 
         #region CompositePrimaryKey
         [Key, Column(Order = 1)]
