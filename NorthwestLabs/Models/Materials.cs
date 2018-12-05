@@ -12,12 +12,12 @@ namespace NorthwestLabs.Models
     [Table("Materials")]
     public class Materials
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Material ID")]
         public int MaterialID { get; set; }
         // Link back to TestMaterials Table
-        public ICollection<TestMaterials> testmaterials { get; set; }
+        public virtual ICollection<TestMaterials> testmaterials { get; set; }
 
         [DisplayName("Material Name")]
         [Required(ErrorMessage = "Material Name is required.")]

@@ -12,7 +12,7 @@ namespace NorthwestLabs.Models
     [Table("CompanyInfo")]
     public class CompanyInfo
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Company Information ID")]
         public int CompanyInfoID { get; set; }

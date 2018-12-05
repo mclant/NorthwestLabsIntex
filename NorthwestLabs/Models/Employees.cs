@@ -12,14 +12,14 @@ namespace NorthwestLabs.Models
     [Table("Employees")]
     public class Employees
     {
-        [Key]
+        [Key, Required]
         [DisplayName("Employee ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmployeeID { get; set; }
         // Link back to the Orders Table
-        public ICollection<Orders> orders { get; set; }
+        public virtual ICollection<Orders> orders { get; set; }
         // LInk back to the TestHours Table
-        public ICollection<TestHours> testhours { get; set; }
+        public virtual ICollection<TestHours> testhours { get; set; }
 
         // Link to the EmployeePositions Table
         [Required(ErrorMessage = "Position ID is required.")]

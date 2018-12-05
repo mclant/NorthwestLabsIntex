@@ -12,12 +12,12 @@ namespace NorthwestLabs.Models
     [Table("Locations")]
     public class Locations
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Location ID")]
         public int LocationID { get; set; }
         // Link back to the Employees table
-        public ICollection<Employees> employees { get; set; }
+        public virtual ICollection<Employees> employees { get; set; }
 
         [Required(ErrorMessage = "Location Name is required.")]
         [StringLength(30, ErrorMessage = "Location Name must not exceed 30 characters.")]

@@ -12,14 +12,14 @@ namespace NorthwestLabs.Models
     [Table("Orders")]
     public class Orders
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Order ID")]
         public int OrderID { get; set; }
         // Link back to the OrderDetails Table
-        public ICollection<OrderDetails> orderdetails { get; set; }
+        public virtual ICollection<OrderDetails> orderdetails { get; set; }
         // Link back to the OrderComments Table
-        public ICollection<OrderComments> ordercomments { get; set; }
+        public virtual ICollection<OrderComments> ordercomments { get; set; }
 
         // Link to the Customers Table
         [ForeignKey("customers")]
@@ -77,5 +77,9 @@ namespace NorthwestLabs.Models
         [ForeignKey("invoices")]
         public int? InvoiceID { get; set; }
         public virtual Invoices invoices { get; set; }
+
+        [DisplayName("Run All Tests")]
+        [Required(ErrorMessage ="You must specify if you would like to run all tests")]
+        public bool RunAllTests { get; set; }
     }
 }

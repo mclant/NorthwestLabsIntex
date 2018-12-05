@@ -12,17 +12,16 @@ namespace NorthwestLabs.Models
     [Table("Compounds")]
     public class Compounds
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("LT Number")]
-        [Required]
         public int LTNumber { get; set; }
         // Link back to AssayInstances Table
-        public ICollection<AssayInstances> assayinstances { get; set; }
+        public virtual ICollection<AssayInstances> assayinstances { get; set; }
         // Link back to Samples Table
-        public ICollection<Samples> samples { get; set; }
+        public virtual ICollection<Samples> samples { get; set; }
         // Link back to the OrderDetails Table
-        public ICollection<OrderDetails> orderdetails { get; set; }
+        public virtual ICollection<OrderDetails> orderdetails { get; set; }
 
         [StringLength(30, ErrorMessage ="Compound Name must not exceed 30 characters.")]
         [DisplayName("Compound Name")]
@@ -30,7 +29,6 @@ namespace NorthwestLabs.Models
         public string CompoundName { get; set; }
 
         [DisplayName("Maximum Dose")]
-        [Required(ErrorMessage = "Maximum Dose is required.")]
         public float? MaximumDose { get; set; }
     }
 }

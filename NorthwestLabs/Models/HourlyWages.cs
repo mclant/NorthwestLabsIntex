@@ -12,12 +12,12 @@ namespace NorthwestLabs.Models
     [Table("HourlyWages")]
     public class HourlyWages
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Hourly Wage ID")]
         public int HourlyWageID { get; set; }
         // Link back to the Employees Table
-        public ICollection<Employees> employees { get; set; }
+        public virtual ICollection<Employees> employees { get; set; }
 
         [Required(ErrorMessage = "Hourly Wage Amount is required.")]
         [DisplayName("Hourly Wage Amount")]

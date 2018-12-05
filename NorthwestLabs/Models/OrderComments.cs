@@ -19,7 +19,7 @@ namespace NorthwestLabs.Models
         public int OrderID { get; set; }
         public virtual Orders orders { get; set; }
 
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Order Comment ID")]
         public int OrderCommentID { get; set; }

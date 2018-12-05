@@ -12,12 +12,12 @@ namespace NorthwestLabs.Models
     [Table("Samples")]
     public class Samples
     {
-        [Key]
+        [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Compound Sequence Code")]
         public int CompoundSequenceCode { get; set; }
         // Link back to SampleTests Table
-        public ICollection<SampleTests> sampletests { get; set; }
+        public virtual ICollection<SampleTests> sampletests { get; set; }
 
         // Link to the Compounds Table
         [DisplayName("LT Number")]

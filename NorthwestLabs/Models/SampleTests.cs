@@ -18,9 +18,9 @@ namespace NorthwestLabs.Models
         [Required]
         public int SampleTestID { get; set; }
         // Link back to TestMaterials Table
-        public ICollection<TestMaterials> testmaterials { get; set; }
+        public virtual ICollection<TestMaterials> testmaterials { get; set; }
         // Link back to the TestHours Table
-        public ICollection<TestHours> testhours { get; set; }
+        public virtual ICollection<TestHours> testhours { get; set; }
 
         // Link to the Samples Table
         [DisplayName("Sample ID")]

@@ -12,7 +12,7 @@ namespace NorthwestLabs.Models
     [Table("Invoices")]
     public class Invoices
     {
-        [Key]
+        [Key, Required]
         [DisplayName("Invoice ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvoiceID { get; set; }

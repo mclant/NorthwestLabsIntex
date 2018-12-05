@@ -15,9 +15,10 @@ namespace NorthwestLabs.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DisplayName("Test Type ID")]
+        [Required]
         public int TestTypeID { get; set; }
         // Link back to SampleTests Table
-        public ICollection<SampleTests> sampletests { get; set; }
+        public virtual ICollection<SampleTests> sampletests { get; set; }
 
         [StringLength(30, ErrorMessage = "Test Type Name must not exceed 30 characters.")]
         [DisplayName("Test Type Name")]
@@ -39,7 +40,6 @@ namespace NorthwestLabs.Models
         public bool TestTypeActive { get; set; }
 
         [DisplayName("Average Test Duration")]
-        [Required(ErrorMessage = "Average Test Duration is required.")]
-        public DateTime AverageTestDuration { get; set; }
+        public DateTime? AverageTestDuration { get; set; }
     }
 }
