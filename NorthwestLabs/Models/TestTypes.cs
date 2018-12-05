@@ -40,6 +40,6 @@ namespace NorthwestLabs.Models
 
         [DisplayName("Average Test Duration")]
         [Required(ErrorMessage = "Average Test Duration is required.")]
-        public DateTime AverageTestDuration { get; set; }
+        public int AverageTestDurationHours { get; set; }
     }
 }
