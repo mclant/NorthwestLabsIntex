@@ -77,7 +77,7 @@ namespace NorthwestLabs.Controllers
         {
             return View(db.Order.ToList());
         }
- 
+
         [HttpPost]
         public ActionResult QuoteInbox(int ordID, [Bind(Include = "OrderID,QuotePrice")] IQueryable<Orders> orders)
         {
@@ -103,6 +103,6 @@ namespace NorthwestLabs.Controllers
         /// <summary>
         /// LABTECH
         /// </summary>
-
+  
     }
 }

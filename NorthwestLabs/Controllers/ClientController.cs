@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using NorthwestLabs.Models;
 using NorthwestLabs.DAL;
+using System.Data.Entity.Validation;
 
 namespace NorthwestLabs.Controllers
 {
@@ -39,6 +40,8 @@ namespace NorthwestLabs.Controllers
                 {
                     db.Customer.Add(newcustomer);
                     db.SaveChanges();
+              
+                    
                 }
                 else
                 {

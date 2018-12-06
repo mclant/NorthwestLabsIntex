@@ -61,7 +61,7 @@
             {
                 <div class="form-group">
                     @Html.EditorFor(model => item.QuotePrice, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.DisplayFor(model => item.OrderID)
+
                     @Html.ValidationMessageFor(model => item.QuotePrice, "", new { @class = "text-danger" })
                     @if (ViewBag.output != null)
                     {
@@ -81,3 +81,4 @@
 }
 
 </table>
+   

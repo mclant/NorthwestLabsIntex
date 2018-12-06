@@ -3254,7 +3254,15 @@ input[type="button"].btn-block {
   font-family:Britannic;
   font-weight:300
 }
+.pic {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 
+.pic:hover{
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 .dropdown-menu.pull-right {
   right: 0;
   left: auto;
