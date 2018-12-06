@@ -2,14 +2,24 @@
     ViewBag.Title = "Home Page";
 }
 
-    <p class="alert-success"><strong>@ViewBag.SuccessfulRegister</strong></p>
+<!-- Viewbag that will display successful login or logout -->
+@if (ViewBag.SuccessfulLogin != null)
+{
+    <br />
+    <p class="alert-success"><strong>@ViewBag.SuccessfulLogin</strong></p>
+}
+else
+{
+    <br />
     <p class="alert-warning"><strong>@ViewBag.SuccessfulLogout</strong></p>
-    <h1 style="font-family:'Copperplate Gothic'">
-        Northwest Labs
-    </h1>
+}
+
+<h1 style="font-family:'Copperplate Gothic'">
+    Northwest Labs
+</h1>
 
 
-<img src="~/Content/Photos/151109153154_1_900x600.jpg" width="1100"/>
+<img src="~/Content/Photos/151109153154_1_900x600.jpg" width="1100" />
 
 <p style="padding-top:10px; font-family:Bahnschrift"><a href="@Url.Action("GetAQuote", "Client")" class="btn btn-success btn-lg btn-block" style="width:1100px">Get a free quote now! &raquo;</a></p>
 

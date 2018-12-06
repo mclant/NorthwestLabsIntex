@@ -18,15 +18,26 @@ namespace NorthwestLabs.Controllers
         public static string sUsername { get; set; }
         public static string sPassword { get; set; }
 
-        // Getter and Setter for Successful Login message
+        // Getters and Setters for Login and Logout messages
         public static string sLogin { get; set; }
-
-        // Getter and Setter for successful Logout message
         public static string sLogout { get; set; }
 
         // GET: Login
         public ActionResult Login()
-        {
+        { 
+            if ((sUsername == "Labtech") && (sPassword == "Success"))
+            {   // Labtech Login => navigates to the Labtech page to show Labtech tasks.
+                sLogin = "You have successfully logged in.";
+                sLogout = null;
+                return RedirectToAction("LabTech", "Employee");
+            }
+            if ((sUsername == "Client") && (sPassword == "Success"))
+            {   // Client Login => navigates to back to the home page with sucessful login message.
+                sLogin = "You have successfully logged in.";
+                sLogout = null;
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
@@ -36,23 +47,29 @@ namespace NorthwestLabs.Controllers
         {
             sUsername = form["username"].ToString();
             sPassword = form["password"].ToString();
-            ViewBag.UnsuccessfulLogin = "Your Username and/or password did not match our records. Please try again";
 
             if ((sUsername == "Client") && (sPassword == "Success"))
-            {
+            {   // Client Login => navigates to back to the home page with sucessful login message.
                 sLogin = "You have successfully logged in.";
+                sLogout = null;
                 return RedirectToAction("Index", "Home"); }
             if ((sUsername == "Labtech") && (sPassword == "Success"))
-            {return RedirectToAction("LabTech", "Employee");}
-            if ((sUsername == "Admin") && (sPassword == "Success"))
-            { return RedirectToAction("Admin", "Employee"); }
-            if ((sUsername == "Director") && (sPassword == "Success"))
-            { return RedirectToAction("<<DIRECTOR VIEW AFTER LOGIN>>", "Employee"); }
-            if ((sUsername == "Finance") && (sPassword == "Success"))
-            {return RedirectToAction("LabTech", "Employee");}
+            {   // Labtech Login => navigates to the Labtech page to show Labtech tasks.
+                sLogin = "You have successfully logged in.";
+                sLogout = null;
+            return RedirectToAction("LabTech", "Employee");}
+
+            // Pages that are not currently linked to anything
+                        if ((sUsername == "Admin") && (sPassword == "Success"))
+                        { return RedirectToAction("Admin", "Employee"); }
+                        if ((sUsername == "Director") && (sPassword == "Success"))
+                        { return RedirectToAction("<<DIRECTOR VIEW AFTER LOGIN>>", "Employee"); }
+                        if ((sUsername == "Finance") && (sPassword == "Success"))
+                        {return RedirectToAction("LabTech", "Employee");}
             else
             {
                 // This will navigate you back to the login page if authentication is unsuccessful
+                ViewBag.UnsuccessfulLogin = "Your Username and/or password did not match our records. Please try again";
                 return View("Login");
             }
         }

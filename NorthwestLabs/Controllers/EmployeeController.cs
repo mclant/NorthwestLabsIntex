@@ -67,10 +67,16 @@ namespace NorthwestLabs.Controllers
 /// </summary>
         public ActionResult LabTech()
         {
-            if (LoginController.sUsername == null)
-            { RedirectToAction("Login", "Login"); }
-
-            return View();
+            if ((LoginController.sUsername == "Labtech") && (LoginController.sPassword == "Success"))
+            {   // Labtech Login => navigates to the Labtech page to show Labtech tasks.
+                LoginController.sLogin = "You have successfully logged in.";
+                LoginController.sLogout = null;
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Login");
+            }
         }
 
         public ActionResult QuoteInbox()
