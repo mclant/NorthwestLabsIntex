@@ -34,13 +34,13 @@ namespace NorthwestLabs.Controllers
             if ((sUsername == "Client") && (sPassword == "Success"))
             {return RedirectToAction("<<CLIENT VIEW AFTER LOGIN>>", "Client");}
             if ((sUsername == "Labtech") && (sPassword == "Success"))
-            {return RedirectToAction("<<LABTECH VIEW AFTER LOGIN>>", "Employee");}
+            {return RedirectToAction("LabTech", "Employee");}
             if ((sUsername == "Admin") && (sPassword == "Success"))
             {return RedirectToAction("<<ADMIN VIEW AFTER LOGIN>>", "Employee");}
             if ((sUsername == "Director") && (sPassword == "Success"))
             {return RedirectToAction("<<DIRECTOR VIEW AFTER LOGIN>>", "Employee");}
             if ((sUsername == "Finance") && (sPassword == "Success"))
-            {return RedirectToAction("<<FINANCE VIEW AFTER LOGIN>>", "Employee");}
+            {return RedirectToAction("LabTech", "Employee");}
             else
             {
                 // This will navigate you back to the login page if authentication is unsuccessful

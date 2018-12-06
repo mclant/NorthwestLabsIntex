@@ -226,6 +226,16 @@
     <Content Include="Views\Client\PlaceQuote.cshtml" />
     <Content Include="Views\Employee\LabTech.cshtml" />
     <Content Include="Views\Employee\QuoteInbox.cshtml" />
+    <Content Include="Views\CompanyInfo\Index.cshtml" />
+    <Content Include="Views\CompanyInfo\AboutUs.cshtml" />
+    <Content Include="Views\CompanyInfo\LabPics.cshtml" />
+    <Content Include="Views\CompanyInfo\Mission.cshtml" />
+    <Content Include="Views\CompanyInfo\AboutCEO.cshtml" />
+    <Content Include="Views\Employee\Admin.cshtml" />
+    <Content Include="Views\Employee\SalesEmployee.cshtml" />
+    <Content Include="Views\Employee\PharmacologyHead.cshtml" />
+    <Content Include="Views\Employee\LabManager.cshtml" />
+    <Content Include="Views\Employee\PharmacologyDirector.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

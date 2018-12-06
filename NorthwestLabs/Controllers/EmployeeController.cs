@@ -29,12 +29,13 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult SalesEmployee()
         {
-            return View();
+            return View(db.Customer.ToList());
         }
 
         public ActionResult PharmacologyHead()
         {
-            return View();
+            
+            return View(db.Invoice.ToList());
         }
 
         public ActionResult LabManager()
