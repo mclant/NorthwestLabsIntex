@@ -34,18 +34,28 @@ namespace NorthwestLabs.Controllers
         public ActionResult GetAQuote(Customers newcustomer)
         {
             newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
+<<<<<<< HEAD
 
+=======
+>>>>>>> newbeans
             if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
                 db.Customer.Add(newcustomer);
                 db.SaveChanges();
+<<<<<<< HEAD
             }
             else
             {
-                ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                if (db.Login.Find(newcustomer.logins.LoginUserName) != null)
+                {
+                    ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                }
+                
                 return View();
             }
             
+
+>>>>>>> newbeans
             ViewBag.CustomerID = newcustomer.CustomerID;
             ViewBag.CustomerName = newcustomer.CustomerName;
 
@@ -64,16 +74,18 @@ namespace NorthwestLabs.Controllers
             neworder.OrderStatusID = 11;
             neworder.RunAllTests = false;
 
+            db.Order.Add(neworder);
+
             ViewBag.CustomerName = custname;
             ViewBag.CustomerID = var;
 
             return View("FinalizeQuote", db.AssayType.ToList());
         }
 
-        public ActionResult QuoteThankYou(AssayTypes newassay, int var, string custname)
+        public ActionResult QuoteThankYou(string var, string custname)
         {
             ViewBag.CustomerName = custname;
-            ViewBag.Assay = newassay.AssayName;
+            ViewBag.AssayName = var;
             
             return View();
         }
