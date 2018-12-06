@@ -42,8 +42,14 @@ namespace NorthwestLabs.Models
         [DisplayName("Customer Email")]
         public string CustomerEmail { get; set; }
 
+<<<<<<< Updated upstream
+        [Required(ErrorMessage = "Customer Balance is required.")]
+        [DisplayName("Customer Balance")]
+        public decimal CustomerBalance { get; set; }
+=======
         [DisplayName("Account Balance")]
         public decimal? CustomerBalance { get; set; }
+>>>>>>> Stashed changes
 
         // Link to the Logins Table
         [Required(ErrorMessage = "Login Username is required.")]

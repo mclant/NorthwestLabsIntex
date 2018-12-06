@@ -6,8 +6,13 @@
 <h2>Quote Request Complete</h2>
 
 <h3>
+<<<<<<< Updated upstream
+    Thank you @ViewBag.CustomerName . Your request for a Quote on @ViewBag.AssayName has been recorded.
+     Check your Quotes page to view the status of your Quotes.
+=======
     Thank you @ViewBag.CustomerName. Your request for a Quote on @ViewBag.AssayName has been recorded.
     Check your Quotes page to view the status of your Quotes.
+>>>>>>> Stashed changes
 </h3>
 
 
