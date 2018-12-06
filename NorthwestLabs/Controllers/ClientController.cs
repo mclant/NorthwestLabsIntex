@@ -39,7 +39,10 @@ namespace NorthwestLabs.Controllers
             {
                 db.Customer.Add(newcustomer);
                 db.SaveChanges();
+<<<<<<< HEAD
  
+=======
+>>>>>>> dev
             }
             else
             {
@@ -51,7 +54,10 @@ namespace NorthwestLabs.Controllers
                 return View();
             }
             
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
             ViewBag.CustomerID = newcustomer.CustomerID;
             ViewBag.CustomerName = newcustomer.CustomerName;
 

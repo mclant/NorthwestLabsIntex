@@ -17,8 +17,12 @@ namespace NorthwestLabs.Controllers
         // Getters and Setters for LoginUsername and Password
         public static string sUsername { get; set; }
         public static string sPassword { get; set; }
+
         // Getter and Setter for Successful Login message
         public static string sLogin { get; set; }
+
+        // Getter and Setter for successful Logout message
+        public static string sLogout { get; set; }
 
         // GET: Login
         public ActionResult Login()
@@ -68,6 +72,7 @@ namespace NorthwestLabs.Controllers
             if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
                 sLogin = "Registration complete! You have successfully logged in.";
+                sLogout = null;
                 db.Customer.Add(newcustomer);
                 db.SaveChanges();
             }
@@ -81,6 +86,21 @@ namespace NorthwestLabs.Controllers
             }
 
             // Renavigates to the home page and shows successful registration and login viewbag
+            return RedirectToAction("Index", "Home");
+        }
+
+        // Will log the user out of their current account.
+        public ActionResult Logout()
+        {
+            // Resets global variables to null so that login again is required.
+            sUsername = null;
+            sPassword = null;
+
+            // sets variable for sLogout to successful logout
+            sLogout = "You have successfully logged out.";
+            sLogin = null;
+
+            // Returns to the home page
             return RedirectToAction("Index", "Home");
         }
     }
