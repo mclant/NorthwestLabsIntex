@@ -62,6 +62,11 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
+        public ActionResult SummReport()
+        {
+            return View();
+        }
+
  /// <summary>
 /// LABTECH
 /// </summary>
