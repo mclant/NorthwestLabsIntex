@@ -67,18 +67,14 @@ namespace NorthwestLabs.Controllers
 /// </summary>
         public ActionResult LabTech()
         {
-<<<<<<< HEAD
             if (LoginController.sUsername == null)
             { RedirectToAction("Login", "Login"); }
-=======
->>>>>>> master
 
             return View();
         }
 
         public ActionResult QuoteInbox()
         {
-
             return View(db.Order.ToList());
         }
  

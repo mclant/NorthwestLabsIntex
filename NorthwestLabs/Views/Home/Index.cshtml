@@ -2,12 +2,17 @@
     ViewBag.Title = "Home Page";
 }
 
-            <h1 style="font-family:Bahnschrift; padding-top:10px">Northwest Labs</h1>
+<h1 style="font-family:Bahnschrift; padding-top:10px">Northwest Labs</h1>
+<p class="alert-success"><strong>@ViewBag.SuccessfulRegister</strong></p>
 
 <img src="~/Content/Photos/picu.jpg" />
 
-<p style="padding-top:10px; font-family:Bahnschrift"><a href="@Url.Action("GetAQuote", "Client")"  class="btn btn-primary btn-lg">Get a free quote now! &raquo;</a></p>
+<p style="padding-top:10px; font-family:Bahnschrift"><a href="@Url.Action("GetAQuote", "Client")" class="btn btn-primary btn-lg">Get a free quote now! &raquo;</a></p>
 
+@if (ViewBag.SuccessfulRegister != null)
+{
+    <p class="text-danger">@ViewBag.error</p>
+}
 
 <div class="row">
     <div class="col-md-4">
