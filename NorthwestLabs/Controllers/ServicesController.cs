@@ -49,5 +49,10 @@ namespace NorthwestLabs.Controllers
             }
             return View(assayTypes);
         }
+
+        public ActionResult Hey()
+        {
+            return View();
+        }
     }
 }

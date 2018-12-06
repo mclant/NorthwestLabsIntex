@@ -2,31 +2,46 @@
     ViewBag.Title = "Home Page";
 }
 
-            <h1 style="font-family:Bahnschrift; padding-top:10px">Northwest Labs</h1>
+    <h1 style="font-family:'Copperplate Gothic'">
+        Northwest Labs
+    </h1>
+    
 
-<img src="~/Content/Photos/picu.jpg" />
 
-<p style="padding-top:10px; font-family:Bahnschrift"><a href="@Url.Action("GetAQuote", "Client")"  class="btn btn-primary btn-lg">Get a free quote now! &raquo;</a></p>
+<img src="~/Content/Photos/151109153154_1_900x600.jpg" width="1100"/>
+
+<p style="padding-top:10px; font-family:Bahnschrift"><a href="@Url.Action("GetAQuote", "Client")" class="btn btn-success btn-lg btn-block" style="width:1100px">Get a free quote now! &raquo;</a></p>
 
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+    <div class="col-md-4" style="font-family:Bahnschrift">
+        <h2 style="font-family:Bahnschrift; text-align:center">Smarter Facilities</h2>
+        <img class="pic" src="~/Content/Photos/women_microscope.jpg" height="250" style="padding:15px" />
+        <p style="font-family:Bahnschrift; text-align:justify">
+            The sun never sets on Northwest. Our global team of highly trained professionals work hard every day to deliver the results you need
+            to continue your quest for the cure. We take the worry out of testing.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+        <p><a style="font-family:Bahnschrift" class="btn btn-info" href="~/CompanyInfo/LabPics">Check Out Our Lab &raquo;</a></p>
+    </div>
+    <div class="col-md-4" style="font-family:Bahnschrift">
+        <h2 style="font-family:Bahnschrift; text-align:center">Faster Processes</h2>
+        <img class="pic" src="~/Content/Photos/images.jpg" height="250" width="275" style="padding:15px" />
+        <p style="font-family:Bahnschrift; text-align:justify">
+            Continuous status reports, email updates, and on-call technical support team help you track your projects from start to finish.
+            Most streamline service, guaranteed. Just read our reviews!
+        </p>
+        <p><a style="font-family:Bahnschrift" class="btn btn-info">See Reviews &raquo;</a></p>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2 style="font-family:Bahnschrift; text-align:center">Better Living</h2>
+        <img class="pic" src="~/Content/Photos/_TB_Patients_to_Get_new_Pills_to_Ease_Treatment_.jpg" height="250" style="padding:15px;" />
+        <p style="font-family:Bahnschrift; text-align:justify">
+            We realize the global impact your work has on the good of our communities, which is why we work so hard to deliver
+            fast, accurate, reliable results. Check out our extensive list of standard and supplemental testing options.
+        </p>
+        <p><a style="font-family:Bahnschrift" class="btn btn-info" href="~/Services/PharmacologyCatalog">Browse Assays &raquo;</a></p>
+
     </div>
 </div>
