@@ -225,10 +225,10 @@
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Client\PlaceQuote.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Employee\LabTech.cshtml" />
     <Content Include="Views\Employee\QuoteInbox.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\CompanyInfo\Index.cshtml" />
     <Content Include="Views\CompanyInfo\AboutUs.cshtml" />
     <Content Include="Views\CompanyInfo\LabPics.cshtml" />
@@ -239,9 +239,11 @@
     <Content Include="Views\Employee\PharmacologyHead.cshtml" />
     <Content Include="Views\Employee\LabManager.cshtml" />
     <Content Include="Views\Employee\PharmacologyDirector.cshtml" />
-=======
     <Content Include="Views\Login\Registration.cshtml" />
->>>>>>> login
+=======
+    <Content Include="Views\Client\QuoteThankYou.cshtml" />
+    <Content Include="Views\Client\FinalizeQuote.cshtml" />
+>>>>>>> newbeans
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

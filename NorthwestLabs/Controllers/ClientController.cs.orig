@@ -32,9 +32,14 @@ namespace NorthwestLabs.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult GetAQuote(Customers newcustomer)
         {
+<<<<<<< HEAD
+                newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
+           
+=======
             newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
             if (ModelState.IsValid)
             {
+>>>>>>> newbeans
                 if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
                 {
                     db.Customer.Add(newcustomer);
@@ -76,7 +81,7 @@ namespace NorthwestLabs.Controllers
             ViewBag.CustomerName = custname;
             ViewBag.Assay = newassay.AssayName;
             
-return View();
+            return View();
         }
         
     }

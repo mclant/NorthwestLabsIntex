@@ -10,9 +10,9 @@ namespace NorthwestLabs.Models
 {
     // Customers Table
     [Table("Customers")]
-    public class Customers : System.Object
+    public class Customers
     {
-        [Key, Required]
+        [Key]
         [DisplayName("Customer ID")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerID { get; set; }

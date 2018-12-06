@@ -239,6 +239,8 @@
     <Content Include="Views\Employee\LabManager.cshtml" />
     <Content Include="Views\Employee\PharmacologyDirector.cshtml" />
     <Content Include="Views\Login\Registration.cshtml" />
+    <Content Include="Views\Client\QuoteThankYou.cshtml" />
+    <Content Include="Views\Client\FinalizeQuote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
