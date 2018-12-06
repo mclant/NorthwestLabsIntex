@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.AssayProtocol)
         </td>
         <td>
-            @Html.ActionLink("Select", "QuoteThankYou", "Client", new { var = item.AssayName, custname = ViewBag.CustomerName }) 
+            @Html.ActionLink("Select", "QuoteThankYou", "Client", new { custname = ViewBag.CustomerName }) 
         </td>
     </tr>
 }

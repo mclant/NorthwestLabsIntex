@@ -249,6 +249,7 @@
     <Content Include="Views\Client\QuoteThankYou.cshtml" />
     <Content Include="Views\Client\FinalizeQuote.cshtml" />
     <Content Include="Views\Employee\SummReport.cshtml" />
+    <Content Include="Views\Client\EnterCompound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

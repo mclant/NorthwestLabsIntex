@@ -187,12 +187,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Photos\1034px-Environmental_Protection_Agency_logo.svg.png" />
+    <Content Include="Content\Photos\151109153154_1_900x600.jpg" />
+    <Content Include="Content\Photos\Depositphotos_87200506-1000pxl.jpg" />
     <Content Include="Content\Photos\download.jpg" />
+    <Content Include="Content\Photos\ecdc671e-2b6f-46df-8d65-a9731f98b039 %281%29.jpeg" />
+    <Content Include="Content\Photos\images.jpg" />
     <Content Include="Content\Photos\list-clipart-check-list2.png" />
-    <Content Include="Content\Photos\picu.jpg" />
     <Content Include="Content\Photos\ecdc671e-2b6f-46df-8d65-a9731f98b039.jpeg" />
     <Content Include="Content\Photos\labworker.png" />
     <Content Include="Content\Photos\labworker2.png" />
+    <Content Include="Content\Photos\mountain-panorama-painting-abstract-art-banner-header-mountain-landscape-sunrise-sunset-digital-rugged-range-huge-64205175.jpg" />
+    <Content Include="Content\Photos\women_microscope.jpg" />
+    <Content Include="Content\Photos\_TB_Patients_to_Get_new_Pills_to_Ease_Treatment_.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -225,7 +232,6 @@
     <Content Include="Views\CompanyInfo\Contact.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Client\PlaceQuote.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Employee\LabTech.cshtml" />
     <Content Include="Views\Employee\QuoteInbox.cshtml" />
@@ -240,10 +246,13 @@
     <Content Include="Views\Employee\LabManager.cshtml" />
     <Content Include="Views\Employee\PharmacologyDirector.cshtml" />
     <Content Include="Views\Login\Registration.cshtml" />
-=======
     <Content Include="Views\Client\QuoteThankYou.cshtml" />
     <Content Include="Views\Client\FinalizeQuote.cshtml" />
->>>>>>> newbeans
+<<<<<<< HEAD
+    <Content Include="Views\Employee\SummReport.cshtml" />
+=======
+    <Content Include="Views\Client\EnterCompound.cshtml" />
+>>>>>>> 26681ceb2706c15892c46b40d0a9caff3e2a351c
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
