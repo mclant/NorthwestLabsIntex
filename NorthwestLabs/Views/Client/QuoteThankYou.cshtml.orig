@@ -18,7 +18,11 @@
 <h2>Quote Request Complete</h2>
 
 <h3>
+<<<<<<< HEAD
+    Thank you @ViewBag.CustomerName . Your request for a Quote on @ViewBag.AssayName has been recorded.
+=======
     Thank you @ViewBag.CustomerName. Your request for a Quote on @ViewBag.AssayName has been recorded.
+>>>>>>> dev
     Check your Quotes page to view the status of your Quotes.
 </h3>
 
