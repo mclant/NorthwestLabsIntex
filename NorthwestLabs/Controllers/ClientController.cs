@@ -67,21 +67,37 @@ namespace NorthwestLabs.Controllers
             neworder.Quote = true;
             neworder.OrderStatusID = 11;
             neworder.RunAllTests = false;
+            neworder.CustomerComments = order.CustomerComments;
 
             db.Order.Add(neworder);
+            db.SaveChanges();
 
             ViewBag.CustomerName = custname;
             ViewBag.CustomerID = var;
 
-            return View("FinalizeQuote", db.AssayType.ToList());
+            return View("EnterCompound");
         }
 
-        public ActionResult QuoteThankYou(string var, string custname)
+        public ActionResult QuoteThankYou( string custname)
         {
             ViewBag.CustomerName = custname;
-            ViewBag.AssayName = var;
             
             return View();
+        }
+        
+        public ActionResult EnterCompound(int compoundnumber, string custname)
+        {
+            ViewBag.CompoundNumber = compoundnumber;
+            ViewBag.CustomerName = custname;
+
+            return View();
+        }
+
+        public ActionResult FinalizeQuote(string custname)
+        {
+            ViewBag.CustomerName = custname;
+
+            return View(db.AssayType.ToList());
         }
         
     }
