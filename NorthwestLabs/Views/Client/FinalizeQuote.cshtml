@@ -4,11 +4,8 @@
     ViewBag.Title = "FinalizeQuote";
 }
 
-<h2>FinalizeQuote</h2>
+<h2>Finalize your Quote by selecting which Assay you would like a quote for.</h2>
 
-<p>
-    @Html.ActionLink("ThankYou", "Client", new { var = ViewBag.CustomerID, custname = ViewBag.CustomerName })
-</p>
 <table class="table">
     <tr>
         <th>
@@ -29,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.AssayProtocol)
         </td>
         <td>
-            @Html.ActionLink("Select", "ThankYou", "Client", new { id=item.AssayTypeID }) 
+            @Html.ActionLink("Select", "QuoteThankYou", "Client", new { var = item.AssayName, custname = ViewBag.CustomerName }) 
         </td>
     </tr>
 }

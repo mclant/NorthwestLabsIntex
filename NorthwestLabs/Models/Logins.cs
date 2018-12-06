@@ -13,7 +13,6 @@ namespace NorthwestLabs.Models
     public class Logins
     {
         [Key]
-        [Required]
         [StringLength(30, ErrorMessage = "Login Username must not exceed 30 characters.")]
         [DisplayName("Login Username")]
         public string LoginUserName { get; set; }
