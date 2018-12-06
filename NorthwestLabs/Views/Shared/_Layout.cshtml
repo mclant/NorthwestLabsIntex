@@ -23,19 +23,19 @@
                 
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" style="padding-top:8px;font-family:Bahnschrift; font-weight:500" >
+                <ul class="nav navbar-nav" style="padding-top:8px;font-family:Bahnschrift; font-weight:500">
                     <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500" >
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500">
                             <!-- Company Information Drop-down list -->
                             Company Information
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
-                            <li><a>@Html.ActionLink("About Us", "AboutUs", "CompanyInfo")</a></li>
-                            <li><a>@Html.ActionLink("Contact Us", "Contact", "CompanyInfo")</a></li>
-                            <li><a>@Html.ActionLink("Lab Pictures", "LabPics", "CompanyInfo")</a></li>
-                            <li><a>@Html.ActionLink("Our Mission", "Mission", "CompanyInfo")</a></li>
-                            <li><a>@Html.ActionLink("About Our CEO", "AboutCEO", "CompanyInfo")</a></li>
+                            <li>@Html.ActionLink("About Us", "AboutUs", "CompanyInfo")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "CompanyInfo")</li>
+                            <li>@Html.ActionLink("Lab Pictures", "LabPics", "CompanyInfo")</li>
+                            <li>@Html.ActionLink("Our Mission", "Mission", "CompanyInfo")</li>
+                            <li>@Html.ActionLink("About Our CEO", "AboutCEO", "CompanyInfo")</li>
                         </ul>
                     </li>
                     <li class="dropdown" style="font-family:Bahnschrift; font-weight:500">
@@ -45,9 +45,9 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
-                            <li><a>@Html.ActionLink("Our Services", "Services", "Services")</a></li>
-                            <li><a>@Html.ActionLink("Pharmacology Catalog", "PharmacologyCatalog", "Services")</a></li>
-                            <li><a>@Html.ActionLink("Protocol Notebook", "ProtocolNotebook", "Services")</a></li>
+                            <li>@Html.ActionLink("Our Services", "Services", "Services")</li>
+                            <li>@Html.ActionLink("Pharmacology Catalog", "PharmacologyCatalog", "Services")</li>
+                            <li>@Html.ActionLink("Protocol Notebook", "ProtocolNotebook", "Services")</li>
                         </ul>
                     </li>
                     <li>
@@ -57,15 +57,13 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
-                            <li><a>@Html.ActionLink("Submit New Order", "NewOrder", "Client")</a></li>
-                            <li><a>@Html.ActionLink("Get a Quote", "GetAQuote", "Client")</a></li>
-                            <li><a>@Html.ActionLink("View Orders", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("View Test Results", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("My Account", "Login", "Login")</a></li>
+                            <li>@Html.ActionLink("Submit New Order", "NewOrder", "Client")</li>
+                            <li>@Html.ActionLink("Get a Quote", "GetAQuote", "Client")</li>
+                            <li>@Html.ActionLink("View Orders", "Login", "Login")</li>
+                            <li>@Html.ActionLink("View Test Results", "Login", "Login")</li>
+                            <li>@Html.ActionLink("My Account", "Login", "Login")</li>
                         </ul>
                     </li>
-
-                    <!-- Anchored to the right-side of the navbar -->
                     <li class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="padding:15px,2px,0px,15px; margin:8px; font-family:Bahnschrift; font-size:larger;font-weight:500">
                             <!-- Employee Portal Drop-down list -->
@@ -73,15 +71,23 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="font-family:Bahnschrift; font-weight:500">
-                            <li><a>@Html.ActionLink("Admin", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("Sales Employee", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("Head of Pharmacology", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("Lab Manager", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("Director of Pharmacology", "Login", "Login")</a></li>
-                            <li><a>@Html.ActionLink("Lab Tech", "Login", "Login")</a></li>
+                            <li>@Html.ActionLink("Admin", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Sales Employee", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Head of Pharmacology", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Lab Manager", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Director of Pharmacology", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Lab Tech", "Login", "Login")</li>
                         </ul>
                     </li>
                 </ul>
+
+                <div class="pull-right nav navbar-nav" style="padding-top:8px;font-family:Bahnschrift; font-weight:500">
+                    <!-- Anchored to the right-side of the navbar -->
+                    <button class="btn btn-primary" type="button" style="padding:15px,2px,0px,15px;margin:8px;font-family:Bahnschrift;font-size:larger;font-weight:500;">
+                        <!-- Logout button -->
+                        @Html.ActionLink("Logout", "Logout", "Login")
+                    </button>
+                </div>
             </div>
         </div>
     </div>

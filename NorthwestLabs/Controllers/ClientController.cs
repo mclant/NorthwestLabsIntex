@@ -34,15 +34,11 @@ namespace NorthwestLabs.Controllers
         public ActionResult GetAQuote(Customers newcustomer)
         {
             newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
-<<<<<<< HEAD
 
-=======
->>>>>>> newbeans
             if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
                 db.Customer.Add(newcustomer);
                 db.SaveChanges();
-<<<<<<< HEAD
             }
             else
             {
@@ -54,8 +50,6 @@ namespace NorthwestLabs.Controllers
                 return View();
             }
             
-
->>>>>>> newbeans
             ViewBag.CustomerID = newcustomer.CustomerID;
             ViewBag.CustomerName = newcustomer.CustomerName;
 
