@@ -26,7 +26,7 @@ namespace NorthwestLabs.Models
         [Required(ErrorMessage = "You must enter your Customer ID")]
         [DisplayName("Customer ID")]
         public int CustomerID { get; set; }
-        public Customers customers { get; set; }
+        public virtual Customers customers { get; set; }
 
         [StringLength(255, ErrorMessage = "Customer Comments must not exceed 255 characters.")]
         [DisplayName("Customer Comments")]

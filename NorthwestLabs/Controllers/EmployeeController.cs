@@ -79,7 +79,7 @@ namespace NorthwestLabs.Controllers
         }
 
         [HttpPost]
-        public ActionResult QuoteInbox(int ordID, [Bind(Include = "OrderID,QuotePrice")] IQueryable<Orders> orders)
+        public ActionResult QuoteInbox(int? quote)
         {
 
             // List<Orders> ord = new List<Orders>();
@@ -92,10 +92,9 @@ namespace NorthwestLabs.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Entry(orders).State = EntityState.Modified;
-                db.SaveChanges();
+
                 ViewBag.output = "Quote Recorded";
-                return View();
+                return View(db.Order.ToList());
             }
 
             return View(db.Order.ToList());

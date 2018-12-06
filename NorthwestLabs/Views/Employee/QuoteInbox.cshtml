@@ -10,10 +10,10 @@
 
 <table class="table">
     <tr>
-        <th>
+        <th class="col-md-2">
             @Html.DisplayNameFor(model => model.customers.CustomerName)
         </th>
-        <th>
+        <th class="col-md-2">
             @Html.DisplayNameFor(model => model.CustomerComments)
         </th>
         <th>
@@ -25,11 +25,15 @@
         <th>
             @Html.DisplayNameFor(model => model.DueDate)
         </th>
-        <th>
+        <th class="col-md-1">
             @Html.DisplayNameFor(model => model.RunAllTests)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.QuotePrice)
+            @if (ViewBag.output != null)
+            {
+                <p style="color:darkblue">@ViewBag.output</p>
+            }
         </th>
 
         <th></th>
@@ -37,11 +41,15 @@
 
     @foreach (var item in Model)
     {
+        if (item.Quote == true)
+        {
+
+        
         <tr>
-            <td>
+            <td class="col-md-2">
                 @Html.DisplayFor(modelItem => item.customers.CustomerName)
             </td>
-            <td>
+            <td class="col-md-2">
                 @Html.DisplayFor(modelItem => item.CustomerComments)
             </td>
             <td>
@@ -53,7 +61,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
             </td>
-            <td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.RunAllTests)
             </td>
             <td>
@@ -63,10 +71,7 @@
                         @Html.EditorFor(model => item.QuotePrice, new { htmlAttributes = new { @class = "form-control" } })
 
                         @Html.ValidationMessageFor(model => item.QuotePrice, "", new { @class = "text-danger" })
-                        @if (ViewBag.output != null)
-                        {
-                            <p style="color:darkblue">ViewBag.output</p>
-                        }
+                        
                     </div>
 
                     <div class="form-group">
@@ -78,6 +83,7 @@
 
 
         </tr>
+        }
     }
 
 </table>
