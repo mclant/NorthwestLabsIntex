@@ -23,28 +23,28 @@ namespace NorthwestLabs.Models
 
         [Required(ErrorMessage = "Customer Name is required.")]
         [StringLength(30, ErrorMessage = "Customer Name must not exceed 30 characters.")]
-        [DisplayName("Customer Name")]
+        [DisplayName("Name")]
         public string CustomerName { get; set; }
 
         [Required(ErrorMessage = "Customer Address is required.")]
         [StringLength(30, ErrorMessage = "Customer Address must not exceed 30 characters.")]
-        [DisplayName("Customer Address")]
+        [DisplayName("Address")]
         public string CustomerAddress { get; set; }
 
         [Required(ErrorMessage = "Customer Phone is required.")]
         [StringLength(30, ErrorMessage = "Customer Phone must not exceed 30 characters.")]
-        [DisplayName("Customer Phone")]
+        [DisplayName("Phone")]
         public string CustomerPhone { get; set; }
 
         [Required(ErrorMessage = "Customer Email is required.")]
         [StringLength(30, ErrorMessage = "Customer Email must not exceed 30 characters.")]
         [EmailAddress]
-        [DisplayName("Customer Email")]
+        [DisplayName("Email")]
         public string CustomerEmail { get; set; }
 
         [Required(ErrorMessage = "Customer Balance is required.")]
-        [DisplayName("Customer Balance")]
-        public decimal CustomerBalance { get; set; }
+        [DisplayName("Account Balance")]
+        public decimal? CustomerBalance { get; set; }
 
         // Link to the Logins Table
         [Required(ErrorMessage = "Login Username is required.")]

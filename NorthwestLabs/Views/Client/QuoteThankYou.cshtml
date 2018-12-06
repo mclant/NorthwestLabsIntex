@@ -3,11 +3,23 @@
     ViewBag.Title = "QuoteThankYou";
 }
 
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("GetAQuote","Client")">Create Account</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("PlaceQuote","Client")">Quote Information</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("PlaceQuote","Client")">Compound Information</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("PlaceQuote","Client")">Assay Information</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Thank You</li>
+    </ol>
+</nav>
+
 <h2>Quote Request Complete</h2>
 
 <h3>
     Thank you @ViewBag.CustomerName . Your request for a Quote on @ViewBag.AssayName has been recorded.
-     Check your Quotes page to view the status of your Quotes.
+    Check your Quotes page to view the status of your Quotes.
 </h3>
 
 
