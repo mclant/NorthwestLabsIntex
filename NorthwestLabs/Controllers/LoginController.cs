@@ -65,7 +65,7 @@ namespace NorthwestLabs.Controllers
         {
             newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
 
-            if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
+            if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
                 sLogin = "Registration complete! You have successfully logged in.";
                 db.Customer.Add(newcustomer);
@@ -73,7 +73,10 @@ namespace NorthwestLabs.Controllers
             }
             else
             {
-                ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                if (db.Login.Find(newcustomer.logins.LoginUserName) != null)
+                { 
+                    ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                }
                 return View();
             }
 

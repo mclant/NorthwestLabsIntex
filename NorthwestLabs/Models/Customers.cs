@@ -52,6 +52,6 @@ namespace NorthwestLabs.Models
         [DisplayName("Login Username")]
         [ForeignKey("logins")]
         public string LoginUserName { get; set; }
-        public Logins logins { get; set; }
+        public virtual Logins logins { get; set; }
     }
 }

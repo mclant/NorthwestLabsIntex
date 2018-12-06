@@ -34,8 +34,10 @@ namespace NorthwestLabs.Controllers
         public ActionResult GetAQuote(Customers newcustomer)
         {
             newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
-            if (ModelState.IsValid)
+
+            if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
+<<<<<<< HEAD
                 if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
                 {
                     db.Customer.Add(newcustomer);
@@ -48,8 +50,17 @@ namespace NorthwestLabs.Controllers
                     ViewBag.error = "The Username you entered is already in use. Please use another Username.";
                     return View();
                 }
+=======
+                db.Customer.Add(newcustomer);
+                db.SaveChanges();
+>>>>>>> 05ebaa38598fd090682f3003e431d22c32273e3b
             }
-
+            else
+            {
+                ViewBag.error = "The Username you entered is already in use. Please use another Username.";
+                return View();
+            }
+            
             ViewBag.CustomerID = newcustomer.CustomerID;
             ViewBag.CustomerName = newcustomer.CustomerName;
 
@@ -79,7 +90,7 @@ namespace NorthwestLabs.Controllers
             ViewBag.CustomerName = custname;
             ViewBag.Assay = newassay.AssayName;
             
-return View();
+            return View();
         }
         
     }
