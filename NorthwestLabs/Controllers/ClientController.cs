@@ -37,23 +37,8 @@ namespace NorthwestLabs.Controllers
 
             if (ModelState.IsValid && db.Login.Find(newcustomer.logins.LoginUserName) == null)
             {
-<<<<<<< HEAD
-                if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
-                {
-                    db.Customer.Add(newcustomer);
-                    db.SaveChanges();
-              
-                    
-                }
-                else
-                {
-                    ViewBag.error = "The Username you entered is already in use. Please use another Username.";
-                    return View();
-                }
-=======
                 db.Customer.Add(newcustomer);
                 db.SaveChanges();
->>>>>>> 05ebaa38598fd090682f3003e431d22c32273e3b
             }
             else
             {
