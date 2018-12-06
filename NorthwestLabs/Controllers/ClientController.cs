@@ -29,9 +29,9 @@ namespace NorthwestLabs.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult GetAQuote(Customers newcustomer)
         {
-            
-                newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
-           
+            newcustomer.logins.LoginUserName = newcustomer.LoginUserName;
+            if (ModelState.IsValid)
+            {
                 if (db.Login.Find(newcustomer.logins.LoginUserName) == null)
                 {
                     db.Customer.Add(newcustomer);
@@ -42,15 +42,39 @@ namespace NorthwestLabs.Controllers
                     ViewBag.error = "The Username you entered is already in use. Please use another Username.";
                     return View();
                 }
+            }
 
+            ViewBag.CustomerID = newcustomer.CustomerID;
+            ViewBag.CustomerName = newcustomer.CustomerName;
+
+            return View("PlaceQuote");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PlaceQuote(Orders order, int var, string custname)
+        {
             Orders neworder = new Orders();
-            neworder.CustomerID = newcustomer.CustomerID;
-            neworder.OrderStatusID = 11;
+            neworder.DueDate = order.DueDate;
+            neworder.CustomerID = var;
             neworder.DateRequested = DateTime.Now;
             neworder.Quote = true;
+            neworder.OrderStatusID = 11;
+            neworder.RunAllTests = false;
 
+            ViewBag.CustomerName = custname;
+            ViewBag.CustomerID = var;
 
-            return View("PlaceOrder");
+            return View("FinalizeQuote", db.AssayType.ToList());
         }
+
+        public ActionResult QuoteThankYou(AssayTypes newassay, int var, string custname)
+        {
+            ViewBag.CustomerName = custname;
+            ViewBag.Assay = newassay.AssayName;
+            
+            return View();
+        }
+        
     }
 }
