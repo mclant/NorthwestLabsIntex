@@ -7,6 +7,19 @@ using System.Data.Entity;
 using NorthwestLabs.DAL;
 using NorthwestLabs.Models;
 
+/***********************************************************************************************************************************************
+ * 
+ *      Project:        INTEX IS CORE 2018
+ *      Group:          2-13
+ *      Authors:        Jon Facer
+ *                      Matt Lant
+ *                      Nate Flanagan
+ *                      Rob Calcote
+ *      Description:    Web application for Northwest Labs LLC. Provides full Client and Employee communication and Order passing functionality.
+ *      Build:          1.0
+ * 
+ ***********************************************************************************************************************************************/
+
 namespace NorthwestLabs.Controllers
 {
     public class HomeController : Controller
@@ -14,10 +27,12 @@ namespace NorthwestLabs.Controllers
         // NorthwestLabs Database -> Hosted on Azure through Matt Lant's Account
         public NorthwestLabsContext db = new NorthwestLabsContext();
 
+        // Landing Page
         public ActionResult Index()
         {
+            ViewBag.SuccessfulLogin = LoginController.sLogin;
             ViewBag.SuccessfulLogout = LoginController.sLogout;
-            ViewBag.SuccessfulRegister = LoginController.sLogin;
+
             return View();
         }
 
@@ -31,8 +46,6 @@ namespace NorthwestLabs.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            
 
             return View();
         }
