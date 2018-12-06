@@ -6,49 +6,48 @@
 
 <h2>Please Login with your Username and Password</h2>
 
+<div class="text-danger">
+    <!-- This viewbag will display after unsuccessful login -->
+    <p>@ViewBag.UnsuccessfulLogin</p>
+</div>
+
 <!-- Form to login customer to existing account -->
 @using (Html.BeginForm("LoginSuccess", "Login", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-
-    <div class="text-danger">
-        <!-- This viewbag will display after unsuccessful login -->
-        <p>@ViewBag.UnsuccessfulLogin</p>
-    </div>
-
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <div class="col-md-10">
-            <label for="inputUsername">Username</label>
-            @Html.TextBox("username")
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="inputUsername">Username</label>
+                @Html.TextBox("username")
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-10">
-            <label for="inputPassword">Password</label>
-            @Html.Password("password")
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="inputPassword">Password</label>
+                @Html.Password("password")
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Login" class="btn btn-default" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default" />
+            </div>
         </div>
-    </div>
-    <br />
-    <!-- Button to navigate customer to new customer registration screen -->
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <button onclick="location.href=
+        <br />
+        <!-- Button to navigate customer to new customer registration screen -->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button onclick="location.href=
                     '@Url.Action("Registration", "Login")';return false;"
-                    class="btn btn-default">
-                Register
-            </button>
+                        class="btn btn-default">
+                    Register
+                </button>
+            </div>
         </div>
     </div>
-</div>
 }
 
 
