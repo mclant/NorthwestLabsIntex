@@ -16,6 +16,7 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.SuccessfulRegister = LoginController.sLogin;
             return View();
         }
 

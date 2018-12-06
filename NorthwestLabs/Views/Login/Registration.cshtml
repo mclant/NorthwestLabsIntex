@@ -1,20 +1,20 @@
 ﻿@model NorthwestLabs.Models.Customers
 
 @{
-    ViewBag.Title = "GetAQuote";
+    ViewBag.Title = "Registration - New Customer";
 }
 
-<h2>GetAQuote</h2>
+<h2>Register a new account with Northwestern Labs</h2>
 
 @if (ViewBag.error != null)
 {
-    <p style="color:red">@ViewBag.error</p>
+    <p class="text-danger">@ViewBag.error</p>
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Customers</h4>
         <hr />
@@ -67,6 +67,7 @@
             </div>
         </div>
 
+
         <!-- Form also to fill out Password for Logins Table -->
         <div class="form-group">
             @Html.LabelFor(model => model.logins.LoginPassword, "LoginPassword", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -78,12 +79,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Register" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

@@ -32,18 +32,27 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult SalesEmployee()
         {
+<<<<<<< HEAD
+            return View(db.Customer.ToList());
+=======
             if (LoginController.sUsername == null)
             { RedirectToAction("Login", "Login"); }
 
-            return View(db.Customer.ToList());
+            return View();
+>>>>>>> login
         }
 
         public ActionResult PharmacologyHead()
         {
+<<<<<<< HEAD
+            
+            return View(db.Invoice.ToList());
+=======
             if (LoginController.sUsername == null)
             { RedirectToAction("Login", "Login"); }
 
-            return View(db.Invoice.ToList());
+            return View();
+>>>>>>> login
         }
 
         public ActionResult LabManager()
