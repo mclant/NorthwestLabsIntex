@@ -41,8 +41,7 @@ namespace NorthwestLabs.Models
         [EmailAddress]
         [DisplayName("Email")]
         public string CustomerEmail { get; set; }
-
-        [Required(ErrorMessage = "Customer Balance is required.")]
+        
         [DisplayName("Account Balance")]
         public decimal? CustomerBalance { get; set; }
 
