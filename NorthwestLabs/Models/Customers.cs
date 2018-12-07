@@ -41,7 +41,6 @@ namespace NorthwestLabs.Models
         [EmailAddress]
         [DisplayName("Email")]
         public string CustomerEmail { get; set; }
-
         [DisplayName("Account Balance")]
         public decimal? CustomerBalance { get; set; }
 

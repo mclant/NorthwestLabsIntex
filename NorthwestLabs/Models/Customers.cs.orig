@@ -41,11 +41,11 @@ namespace NorthwestLabs.Models
         [EmailAddress]
         [DisplayName("Email")]
         public string CustomerEmail { get; set; }
-
 <<<<<<< HEAD
-        [Required(ErrorMessage = "Customer Balance is required.")]
+
 =======
->>>>>>> dev
+        
+>>>>>>> newbeans
         [DisplayName("Account Balance")]
         public decimal? CustomerBalance { get; set; }
 
